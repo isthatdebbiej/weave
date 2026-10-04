@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-10-04T21:30:00Z",
+  "stoppedAt": "2026-10-04T22:48:38.856Z",
+  "budgetSeconds": 5400,
+  "timezone": "America/Los_Angeles",
+  "elapsedSeconds": 4718,
+  "duration": "01:18:38",
+  "publicUrl": "https://weave-engineering-impact-six.vercel.app",
+  "verification": "Unauthenticated HTTP 200, production browser interactions, source-link checks, and local production build completed before stopping."
+}
