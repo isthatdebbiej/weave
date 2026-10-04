@@ -1,0 +1,48 @@
+# Change this file to collect a different public GitHub repository.
+repository: PostHog/posthog
+displayName: PostHog
+window:
+  days: 90
+  # Use null for a fresh snapshot ending when collection starts.
+  end: '2026-10-04T21:44:49Z'
+collection:
+  state: merged
+  partitionDays: 3
+  pageSize: 100
+  requestIntervalMs: 2200
+capabilities:
+  - id: data
+    name: Data platform
+    scopes: 'warehouse|data-import|data-model|data-catalog|hogql|clickhouse|personhog|persons|ingestion|batch-export|capture|stamphog'
+    color: '#7964a3'
+    tint: '#f0ebf8'
+  - id: analytics
+    name: Analytics & replay
+    scopes: 'analytics|insights|dashboard|replay|notebook|cohort|canvas|funnel|retention|trend'
+    color: '#5b859e'
+    tint: '#edf4f8'
+  - id: ai
+    name: AI & agents
+    scopes: 'desktop|tasks|signals|aio|mcp|posthog-ai|ai-research|llm|tracing|skills|wizard|agent'
+    color: '#af7d57'
+    tint: '#fbf1e8'
+  - id: experiments
+    name: Experiments & flags
+    scopes: 'experiment|flags|feature-flag|survey'
+    color: '#6c8d70'
+    tint: '#eef5ee'
+  - id: workflows
+    name: Customer workflows
+    scopes: 'workflow|conversation|cdp|slack|messag|destination|hog-function'
+    color: '#a2698b'
+    tint: '#f7edf3'
+  - id: infrastructure
+    name: Infrastructure & APIs
+    scopes: 'logs|metrics|alerts|postgres|frontend|billing|auth|subscription|oauth|^api$|growth|today|error-tracking|security|backend|infra'
+    color: '#9a8459'
+    tint: '#f6f2e8'
+  - id: tooling
+    name: Developer tooling
+    scopes: '^ci$|devex|test|visual-review|^cli$|build|lint|dependencies|deps|tooling'
+    color: '#628c87'
+    tint: '#ecf5f3'

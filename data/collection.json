@@ -1,0 +1,8 @@
+{
+  "start": "2026-07-06T21:44:49Z",
+  "end": "2026-10-04T21:44:49Z",
+  "expectedPRs": 16064,
+  "incomplete": false,
+  "repository": "PostHog/posthog",
+  "rawDir": "data/raw/PostHog_posthog"
+}

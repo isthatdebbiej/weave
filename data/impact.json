@@ -1,0 +1,1695 @@
+{
+  "version": "1.0.0",
+  "manifest": {
+    "repository": "PostHog/posthog",
+    "displayName": "PostHog",
+    "start": "2026-07-06T21:44:49Z",
+    "end": "2026-10-04T21:44:49Z",
+    "generatedAt": "2026-10-04T22:20:30.596Z",
+    "expectedPRs": 16064,
+    "collectedPRs": 16064,
+    "uniquePRs": 16064,
+    "screenedPRs": 16064,
+    "humanAuthoredPRs": 14323,
+    "botAuthoredPRs": 1741,
+    "reviewedPRs": 42,
+    "complete": true,
+    "windows": 32,
+    "reviewedSourceCount": 67,
+    "notes": [
+      "Candidate retrieval screens all metadata using broad dimension-specific patterns; final ratings are curated from source descriptions, implementation patches, tests, and review trails. This is a bounded evidence review, not an exhaustive expert review of every contribution.",
+      "The assessed cohort is selected from candidates across six dimensions, not from PR-count leaderboards. Rankings describe the verified outcomes in this assessment and may change with additional evidence.",
+      "Performance values are attributed to their public source and measurement context. Private benchmark dashboards were not independently accessed."
+    ]
+  },
+  "engineers": [
+    {
+      "id": "Gilbert09",
+      "name": "Tom Owers",
+      "avatar": "https://avatars.githubusercontent.com/u/1459269?v=4",
+      "url": "https://github.com/Gilbert09"
+    },
+    {
+      "id": "danielcarletti",
+      "name": "Daniel RC",
+      "avatar": "https://avatars.githubusercontent.com/u/13837907?v=4",
+      "url": "https://github.com/danielcarletti"
+    },
+    {
+      "id": "estefaniarabadan",
+      "name": "estefania",
+      "avatar": "https://avatars.githubusercontent.com/u/10627591?v=4",
+      "url": "https://github.com/estefaniarabadan"
+    },
+    {
+      "id": "webjunkie",
+      "name": "Julian Bez",
+      "avatar": "https://avatars.githubusercontent.com/u/59713?v=4",
+      "url": "https://github.com/webjunkie"
+    },
+    {
+      "id": "jose-sequeira",
+      "name": "José Sequeira",
+      "avatar": "https://avatars.githubusercontent.com/u/117165826?v=4",
+      "url": "https://github.com/jose-sequeira"
+    },
+    {
+      "id": "pl",
+      "name": "Paweł Ledwoń",
+      "avatar": "https://avatars.githubusercontent.com/u/69904?v=4",
+      "url": "https://github.com/pl"
+    },
+    {
+      "id": "matheus-vb",
+      "name": "Matheus Batista",
+      "avatar": "https://avatars.githubusercontent.com/u/88170905?v=4",
+      "url": "https://github.com/matheus-vb"
+    },
+    {
+      "id": "arthurdedeus",
+      "name": "Arthur Moreira de Deus",
+      "avatar": "https://avatars.githubusercontent.com/u/54866778?v=4",
+      "url": "https://github.com/arthurdedeus"
+    },
+    {
+      "id": "ceyniustranberg",
+      "name": "Christophe Eynius Tranberg",
+      "avatar": "https://avatars.githubusercontent.com/u/119332946?v=4",
+      "url": "https://github.com/ceyniustranberg"
+    },
+    {
+      "id": "mariusandra",
+      "name": "Marius Andra",
+      "avatar": "https://avatars.githubusercontent.com/u/53387?v=4",
+      "url": "https://github.com/mariusandra"
+    },
+    {
+      "id": "sinan-ku",
+      "name": "Sinan Kucukkoseler",
+      "avatar": "https://avatars.githubusercontent.com/u/44866275?v=4",
+      "url": "https://github.com/sinan-ku"
+    },
+    {
+      "id": "sampennington",
+      "name": "Sam Pennington",
+      "avatar": "https://avatars.githubusercontent.com/u/56024559?v=4",
+      "url": "https://github.com/sampennington"
+    },
+    {
+      "id": "thmsobrmlr",
+      "name": "Thomas Obermüller",
+      "avatar": "https://avatars.githubusercontent.com/u/1851359?v=4",
+      "url": "https://github.com/thmsobrmlr"
+    },
+    {
+      "id": "mikaylathompson",
+      "name": "Mikayla Thompson",
+      "avatar": "https://avatars.githubusercontent.com/u/3933820?v=4",
+      "url": "https://github.com/mikaylathompson"
+    },
+    {
+      "id": "benjackwhite",
+      "name": "Ben White",
+      "avatar": "https://avatars.githubusercontent.com/u/2536520?v=4",
+      "url": "https://github.com/benjackwhite"
+    },
+    {
+      "id": "robbie-c",
+      "name": "Robbie",
+      "avatar": "https://avatars.githubusercontent.com/u/2056078?v=4",
+      "url": "https://github.com/robbie-c"
+    },
+    {
+      "id": "georgemunyoro",
+      "name": "George Munyoro",
+      "avatar": "https://avatars.githubusercontent.com/u/32019551?v=4",
+      "url": "https://github.com/georgemunyoro"
+    },
+    {
+      "id": "rnegron",
+      "name": "Raúl Negrón-Otero",
+      "avatar": "https://avatars.githubusercontent.com/u/4153103?v=4",
+      "url": "https://github.com/rnegron"
+    },
+    {
+      "id": "rafaeelaudibert",
+      "name": "Rafael Audibert",
+      "avatar": "https://avatars.githubusercontent.com/u/32079912?v=4",
+      "url": "https://github.com/rafaeelaudibert"
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "warehouse-foundations",
+      "name": "Warehouse foundations",
+      "dimension": "leverage"
+    },
+    {
+      "id": "warehouse-development",
+      "name": "Warehouse development",
+      "dimension": "devex"
+    },
+    {
+      "id": "warehouse-resilience",
+      "name": "Warehouse resilience",
+      "dimension": "reliability"
+    },
+    {
+      "id": "warehouse-fanout",
+      "name": "Warehouse fan-out",
+      "dimension": "performance"
+    },
+    {
+      "id": "developer-bootstrap",
+      "name": "Developer bootstrap",
+      "dimension": "devex"
+    },
+    {
+      "id": "frontend-feedback",
+      "name": "Frontend feedback",
+      "dimension": "devex"
+    },
+    {
+      "id": "hogvm-runtime",
+      "name": "HogVM runtime",
+      "dimension": "performance"
+    },
+    {
+      "id": "customer-analytics",
+      "name": "Customer analytics",
+      "dimension": "performance"
+    },
+    {
+      "id": "account-announcements",
+      "name": "Account announcements",
+      "dimension": "leverage"
+    },
+    {
+      "id": "notebook-widgets",
+      "name": "Reusable notebook widgets",
+      "dimension": "product"
+    },
+    {
+      "id": "insight-maintainability",
+      "name": "Insight maintainability",
+      "dimension": "simplification"
+    },
+    {
+      "id": "signals-followup",
+      "name": "Signals follow-up measurements",
+      "dimension": "product"
+    },
+    {
+      "id": "node-test-feedback",
+      "name": "Node test feedback",
+      "dimension": "devex"
+    },
+    {
+      "id": "replay-resilience",
+      "name": "Replay ingestion resilience",
+      "dimension": "reliability"
+    },
+    {
+      "id": "query-foundations",
+      "name": "Shared query foundations",
+      "dimension": "leverage"
+    },
+    {
+      "id": "ci-maintainability",
+      "name": "CI maintainability",
+      "dimension": "simplification"
+    },
+    {
+      "id": "product-onboarding",
+      "name": "Product onboarding",
+      "dimension": "product"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "rest-framework",
+      "initiativeId": "warehouse-foundations",
+      "title": "A shared foundation for 130 connectors",
+      "summary": "Replaced repeated authentication, pagination, retry, and resume logic with a shared REST framework, and changed authoring guidance to prevent the duplication returning.",
+      "benefit": "Framework fixes can now reach the migrated connectors through one implementation. The migration preserves connector-specific behavior and adds shared host-pinning and secret-redaction protections.",
+      "dimension": "leverage",
+      "significance": 5,
+      "significanceRationale": "Broad, demonstrated adoption across approximately 130 connectors, with framework regression tests and a reported full source-suite run. The follow-up migration establishes adoption beyond a proposed abstraction.",
+      "confidence": "documented",
+      "stage": "Merged · adopted in code",
+      "verified": true,
+      "evidenceIds": [
+        "pr-71477",
+        "pr-72023",
+        "code-71477-ccd039a0d31a582a68e66309fef1bf10ac3ebc4b"
+      ],
+      "participants": [
+        {
+          "engineerId": "Gilbert09",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-71477"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "~130",
+          "label": "connectors migrated",
+          "context": "The merged migration enumerates approximately 130 source connectors adopting common/rest_source; this is adoption breadth, not a PR count.",
+          "evidenceIds": [
+            "pr-72023"
+          ]
+        }
+      ],
+      "followUp": "Extend the same test-gated migration to remaining bespoke connectors, prioritizing duplicated retry and authentication paths.",
+      "limitations": [
+        "Adoption is demonstrated in repository code; production maintenance savings were not measured."
+      ]
+    },
+    {
+      "id": "warehouse-test-cost",
+      "initiativeId": "warehouse-development",
+      "title": "A 20-minute test loop reduced to 1.6",
+      "summary": "Removed real retry sleeps and repeated parser, subprocess, and fixture costs from the warehouse backend test suite while preserving the reported test outcomes.",
+      "benefit": "Engineers working on warehouse sources get substantially faster feedback from the service-free test suite without removing assertions.",
+      "dimension": "devex",
+      "significance": 3,
+      "significanceRationale": "A substantial, repeatable development workflow improvement supported by before/after timing and implementation changes. Limited to the measured local, service-free workload.",
+      "confidence": "documented",
+      "stage": "Reported local benchmark",
+      "verified": true,
+      "evidenceIds": [
+        "pr-69665",
+        "code-69665-9b3ab84b11175ef9f8e5476787cd42d17c4df4e3"
+      ],
+      "participants": [
+        {
+          "engineerId": "Gilbert09",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-69665"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "20.5 → 1.6 min",
+          "label": "local suite time",
+          "context": "Author-reported single-process service-free suite; unchanged pass/skip/error outcomes. Environment-dependent errors remained.",
+          "evidenceIds": [
+            "pr-69665"
+          ]
+        },
+        {
+          "value": "~12×",
+          "label": "faster feedback",
+          "context": "Approximate speedup reported for the same service-free test workload, not all CI.",
+          "evidenceIds": [
+            "pr-69665"
+          ]
+        }
+      ],
+      "followUp": "Measure the same changes on CI hardware before estimating team-wide waiting time saved.",
+      "limitations": [
+        "Local measurements; 66 environment-dependent errors remained unchanged. No claim of a 12× reduction in total CI time."
+      ]
+    },
+    {
+      "id": "warehouse-memory-recovery",
+      "initiativeId": "warehouse-resilience",
+      "title": "Recovering failed warehouse imports safely",
+      "summary": "Added recovery for corrupt Delta logs, bounded memory-related repartitioning, and a path to coarsen tables that had been split too aggressively.",
+      "benefit": "Warehouse imports can recover without repeatedly worsening fragmentation. Review-driven changes also avoid redundant maintenance and protect the salvage path with a regression test.",
+      "dimension": "reliability",
+      "significance": 3,
+      "significanceRationale": "Substantial subsystem reliability work with targeted recovery tests and reported end-to-end partition-coarsening validation. Related fixes are grouped so repair work does not earn separate volume credit.",
+      "confidence": "corroborated",
+      "stage": "Merged · regression tested",
+      "verified": true,
+      "evidenceIds": [
+        "pr-68639",
+        "pr-72934",
+        "pr-76349",
+        "review-3531208797",
+        "review-3531381414",
+        "code-68639-807936fda15be1b4e0b976b4fc60c077942dc2de"
+      ],
+      "participants": [
+        {
+          "engineerId": "Gilbert09",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-68639"
+          ]
+        },
+        {
+          "engineerId": "danielcarletti",
+          "role": "Contributor",
+          "rationale": "Implemented the coarsening repair and materially reviewed the original recovery work, including the missing salvage test and duplicate-vacuum path.",
+          "evidenceIds": [
+            "review-3531208797",
+            "pr-76349",
+            "review-3531381414"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Preserved",
+          "label": "row identities in E2E",
+          "context": "The coarsening test compares full row-ID lists across the rewrite rather than counts alone.",
+          "evidenceIds": [
+            "pr-76349"
+          ]
+        }
+      ],
+      "followUp": "Track genuine OOMs separately from deploy-related heartbeat loss, then verify recovery and coarsening outcomes after rollout.",
+      "limitations": [
+        "No measured fleet-wide incident reduction. Disk spilling is disabled by default and needs infrastructure configuration; coarsening is feature gated."
+      ]
+    },
+    {
+      "id": "parent-table-reuse",
+      "initiativeId": "warehouse-fanout",
+      "title": "Reuse parent data instead of re-fetching it",
+      "summary": "Reused a completed warehouse snapshot for fan-out endpoints instead of repeatedly fetching the parent list from the vendor API.",
+      "benefit": "Reduces redundant vendor requests while preserving a consistent parent snapshot. A Sentry issue-tag-values comparison returned the same 77 rows with a shorter run.",
+      "dimension": "performance",
+      "significance": 3,
+      "significanceRationale": "Measured improvement for a concrete end-to-end workload, backed by matching results and regression tests. The result is not extrapolated to the entire source fleet.",
+      "confidence": "corroborated",
+      "stage": "Local end-to-end comparison",
+      "verified": true,
+      "evidenceIds": [
+        "pr-72929",
+        "pr-83322",
+        "review-3681706749",
+        "review-3682898446",
+        "code-72929-aec03a5514ce046e0556371d9548cc456eafc8be"
+      ],
+      "participants": [
+        {
+          "engineerId": "danielcarletti",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-72929"
+          ]
+        },
+        {
+          "engineerId": "estefaniarabadan",
+          "role": "Reviewer",
+          "rationale": "Prompted completed-snapshot pinning and removal of silently enabling billable parent syncs; the author confirmed both design changes.",
+          "evidenceIds": [
+            "review-3681706749",
+            "pr-72929",
+            "review-3682898446"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "105.9 → 37.0 s",
+          "label": "Sentry test sync",
+          "context": "Author-reported devbox comparison for issue_tag_values; 77 rows through either parent source, with the gate forced on locally.",
+          "evidenceIds": [
+            "pr-72929"
+          ]
+        }
+      ],
+      "followUp": "Use the added drift counters to expand rollout only where warehouse parent snapshots stay sufficiently fresh.",
+      "limitations": [
+        "Feature gated. One real Sentry source was tested; timings for the two smaller child tables were explicitly described as noise."
+      ]
+    },
+    {
+      "id": "source-api-versioning",
+      "initiativeId": "warehouse-foundations",
+      "title": "Version pins that keep source upgrades deliberate",
+      "summary": "Added explicit API-version declarations and per-source-instance pins, seeding existing versions and introducing a generic deprecation surface.",
+      "benefit": "Source maintainers can introduce a vendor API version without silently changing existing customer configurations. Stripe demonstrates runtime dispatch through the shared contract.",
+      "dimension": "leverage",
+      "significance": 3,
+      "significanceRationale": "A shared maintenance capability adopted across source declarations, with actual runtime dispatch in Stripe. Breadth of declarations does not imply all vendors have multi-version runtime support.",
+      "confidence": "documented",
+      "stage": "Merged · registry adoption",
+      "verified": true,
+      "evidenceIds": [
+        "pr-70018",
+        "code-70018-b60ab94e125ab299c2969980b230d8019a71d815"
+      ],
+      "participants": [
+        {
+          "engineerId": "danielcarletti",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-70018"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "217",
+          "label": "released sources seeded",
+          "context": "The PR documents existing version declarations seeded for 217 released sources; the versioning machinery leaves existing behavior unchanged.",
+          "evidenceIds": [
+            "pr-70018"
+          ]
+        }
+      ],
+      "followUp": "Prioritize the next vendor sunset and validate an explicit customer migration using the version-pin runbook.",
+      "limitations": [
+        "Most sources retain their current hardcoded version until a later dispatch implementation."
+      ]
+    },
+    {
+      "id": "migration-squash",
+      "initiativeId": "developer-bootstrap",
+      "title": "A shorter path to a fresh database",
+      "summary": "Squashed historical Django migrations to reduce fresh-database setup, then repaired schema-restore, duplicate-index, and partial-upgrade regressions.",
+      "benefit": "Fresh CI and development databases apply a shorter migration chain. The complete story includes the rollout repair work and the upgrade paths the first version missed.",
+      "dimension": "devex",
+      "significance": 3,
+      "significanceRationale": "Substantial shared workflow improvement, conservatively rated 3 because the initial rollout caused documented CI and upgrade regressions. Follow-up repairs are grouped into the original outcome.",
+      "confidence": "documented",
+      "stage": "Validated locally · repaired",
+      "verified": true,
+      "evidenceIds": [
+        "pr-91646",
+        "pr-96400",
+        "pr-96430",
+        "pr-96466",
+        "pr-99932",
+        "code-91646-78f0c214890e91f159f03eaae01325bdaf90182c"
+      ],
+      "participants": [
+        {
+          "engineerId": "webjunkie",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-91646"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "~20 → 5.5 min",
+          "label": "fresh default database",
+          "context": "The original PR reports approximately 20 minutes before and a final local fresh default-database run of about 5.5 minutes.",
+          "evidenceIds": [
+            "pr-91646"
+          ]
+        }
+      ],
+      "followUp": "Make partially migrated databases and restored schema dumps mandatory cases for the next migration squash.",
+      "limitations": [
+        "The first rollout broke E2E restores and partial upgrades and created a duplicate index. Linked follow-ups repair those paths; net team-hours saved is unknown."
+      ]
+    },
+    {
+      "id": "light-worktrees",
+      "initiativeId": "developer-bootstrap",
+      "title": "Light worktrees with no second toolchain install",
+      "summary": "Let matching-lockfile worktrees borrow the main clone's Python and Node toolchain, preserving local-install precedence and refusing mismatched dependencies.",
+      "benefit": "Small edit-and-commit tasks avoid duplicated environments, and Python pre-commit checks work in a bare linked worktree.",
+      "dimension": "devex",
+      "significance": 3,
+      "significanceRationale": "A substantial development setup improvement with a documented end-to-end bare-shell test and explicit lockfile/mutation guards.",
+      "confidence": "documented",
+      "stage": "Validated local workflow",
+      "verified": true,
+      "evidenceIds": [
+        "pr-70648",
+        "code-70648-3bab9418f332ea2fe744e17e909e3e1d3177974f"
+      ],
+      "participants": [
+        {
+          "engineerId": "webjunkie",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-70648"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "~6 GB → 470 MB",
+          "label": "edit-and-commit worktree",
+          "context": "Author-reported footprint for a light worktree versus the full setup; app-running worktrees still need the heavy setup.",
+          "evidenceIds": [
+            "pr-70648"
+          ]
+        }
+      ],
+      "followUp": "Make the lightweight path easy to discover and check whether engineers still create full environments for small changes.",
+      "limitations": [
+        "Measured for edit-and-commit worktrees; no team-wide adoption or time-saved measurement."
+      ]
+    },
+    {
+      "id": "automatic-previews",
+      "initiativeId": "frontend-feedback",
+      "title": "App previews available without a manual label",
+      "summary": "Enabled automatic hibernating app previews for eligible frontend PRs, with opt-out, draft handling, and teardown paths.",
+      "benefit": "Creates a direct route for reviewers to inspect the application behavior of a frontend change.",
+      "dimension": "devex",
+      "significance": 1,
+      "significanceRationale": "A bounded implemented workflow capability. The source says real label-driven dogfooding remained to be done, so estimated adoption and compute savings are not treated as outcomes.",
+      "confidence": "documented",
+      "stage": "Merged · rollout unverified",
+      "verified": true,
+      "evidenceIds": [
+        "pr-68859",
+        "code-68859-4fe5487f2e65023780c3c35a6589e5c3018d0705"
+      ],
+      "participants": [
+        {
+          "engineerId": "webjunkie",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-68859"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Check whether reviewers use the previews and whether preview readiness becomes part of the review workflow.",
+      "limitations": [
+        "No verified post-merge adoption. Estimated VM hours in the PR are forecasts, not measured savings."
+      ]
+    },
+    {
+      "id": "hogvm-execution",
+      "initiativeId": "hogvm-runtime",
+      "title": "Faster transformations on production ingestion",
+      "summary": "Reduced interpreter allocation and dispatch costs in the Rust HogVM. Production old/new pods were compared on the same EU ingestion traffic.",
+      "benefit": "The shared transformation runtime executes each event with lower latency. The evidence also captures a separate cohort call-site regression and its follow-up repair.",
+      "dimension": "performance",
+      "significance": 5,
+      "significanceRationale": "Broad shared-runtime benefit supported by a production before/after table with unchanged reported error rate and parity tests. Affected cohort consumers required an additional fix, disclosed here.",
+      "confidence": "corroborated",
+      "stage": "Author-reported production A/B",
+      "verified": true,
+      "evidenceIds": [
+        "pr-74117",
+        "pr-95610",
+        "review-3924053972",
+        "review-3924658444",
+        "code-74117-31df22ecf08e2abe540a530517861e27c37fc8f6"
+      ],
+      "participants": [
+        {
+          "engineerId": "jose-sequeira",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-74117"
+          ]
+        },
+        {
+          "engineerId": "pl",
+          "role": "Reviewer",
+          "rationale": "Identified missing token-decode and chunk-switch coverage; the author added the requested regression tests before merge.",
+          "evidenceIds": [
+            "review-3924053972",
+            "pr-74117",
+            "review-3924658444"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "0.76 → 0.48 ms",
+          "label": "reported p90 execution",
+          "context": "Author-reported same-window EU main analytics ingestion comparison, all transformations mixed. Source dashboards are private; the public PR records the figures.",
+          "evidenceIds": [
+            "pr-74117"
+          ]
+        },
+        {
+          "value": "−34%",
+          "label": "reported p50 latency",
+          "context": "0.34 ms to 0.23 ms in the same reported production comparison.",
+          "evidenceIds": [
+            "pr-74117"
+          ]
+        }
+      ],
+      "followUp": "Audit other HogVM consumers for decode-on-every-evaluation behavior before widening runtime changes.",
+      "limitations": [
+        "Production figures are author-reported, not independently reproduced. A cohort consumer paid repeated decode costs; PR #95610 addresses that separately."
+      ]
+    },
+    {
+      "id": "cohort-decode",
+      "initiativeId": "hogvm-runtime",
+      "title": "Decode cohort conditions once, not per event",
+      "summary": "Moved condition bytecode decoding into catalog construction so repeated cohort evaluations reuse a decoded program.",
+      "benefit": "Avoids repeatedly allocating thousands of string literals for large membership conditions, addressing a concrete integration cost of the new HogVM representation.",
+      "dimension": "performance",
+      "significance": 3,
+      "significanceRationale": "Substantial hot-path improvement shown for an explicitly scoped microbenchmark, with parity and malformed-program handling changes. No throughput extrapolation.",
+      "confidence": "documented",
+      "stage": "Reported microbenchmark",
+      "verified": true,
+      "evidenceIds": [
+        "pr-95610",
+        "code-95610-373a575cd693cc021dd719291863b6fb4651a737"
+      ],
+      "participants": [
+        {
+          "engineerId": "matheus-vb",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-95610"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "744.1 → 420.2 μs",
+          "label": "8,000-string IN evaluation",
+          "context": "One reported scratch microbenchmark run on a dev machine; smaller four-condition timing was near run-to-run noise.",
+          "evidenceIds": [
+            "pr-95610"
+          ]
+        }
+      ],
+      "followUp": "Measure the catalog-build cost and production evaluation distribution before estimating throughput gains.",
+      "limitations": [
+        "Single-machine microbenchmark. Malformed programs now drop at catalog construction; rollout monitoring is required."
+      ]
+    },
+    {
+      "id": "account-query",
+      "initiativeId": "customer-analytics",
+      "title": "Faster account lists with scoped database reads",
+      "summary": "Pushed tenant filtering into federated Postgres reads and combined compatible aggregating joins for Customer Analytics account queries.",
+      "benefit": "Account lists with custom properties avoid scanning unrelated rows. The benchmark verifies identical result hashes while making the latency and memory trade-off explicit.",
+      "dimension": "performance",
+      "significance": 3,
+      "significanceRationale": "A substantial measured workflow improvement with repeated HTTP benchmarks and correctness checks, conservatively scoped to the tested account configurations.",
+      "confidence": "documented",
+      "stage": "Reported benchmark · gated",
+      "verified": true,
+      "evidenceIds": [
+        "pr-78648",
+        "code-78648-92c52d5e483104cd2b29acbc1b56989573572f46"
+      ],
+      "participants": [
+        {
+          "engineerId": "arthurdedeus",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-78648"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "842 → 241 ms",
+          "label": "10k accounts + 5 properties",
+          "context": "Median of 10 real HTTP requests per scenario, with byte-identical result hashes; not a fleet-wide latency measurement.",
+          "evidenceIds": [
+            "pr-78648"
+          ]
+        }
+      ],
+      "followUp": "Validate the rollout on large accounts while monitoring memory before widening the feature flag.",
+      "limitations": [
+        "At 100k accounts the relative improvement shrinks. The largest tested scenario increased peak memory from 132 MB to about 315 MB."
+      ]
+    },
+    {
+      "id": "announcements-foundation",
+      "initiativeId": "account-announcements",
+      "title": "A supported bridge from accounts to Slack channels",
+      "summary": "Extracted a conversations facade that Customer Analytics could use without importing another product's internals. The announcement API and send workflow then adopted that contract.",
+      "benefit": "The delivered stack gives account managers a compose, preview, and delivery flow while keeping product boundaries explicit.",
+      "dimension": "leverage",
+      "significance": 3,
+      "significanceRationale": "An explicit cross-engineer dependency chain, from facade to API to asynchronous delivery to UI. The whole stack is one outcome rather than five PRs of credit.",
+      "confidence": "documented",
+      "stage": "Merged · downstream adoption",
+      "verified": true,
+      "evidenceIds": [
+        "pr-72688",
+        "pr-70358",
+        "pr-70366",
+        "pr-70370",
+        "pr-70377",
+        "code-72688-5562f20dbb472218e150aa6a294a86c1c9ee8a12"
+      ],
+      "participants": [
+        {
+          "engineerId": "arthurdedeus",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-72688"
+          ]
+        },
+        {
+          "engineerId": "ceyniustranberg",
+          "role": "Adopter",
+          "rationale": "Built the model, API, send task, and UI that consume the conversations facade; the stack explicitly links its dependencies.",
+          "evidenceIds": [
+            "pr-70377"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "Facade → API → UI",
+          "label": "documented dependency chain",
+          "context": "The stacked PR descriptions explicitly identify the dependency sequence, and the API imports the conversations facade.",
+          "evidenceIds": [
+            "pr-70366"
+          ]
+        }
+      ],
+      "followUp": "Reuse the facade contract for other cross-product channel integrations, while validating actual announcement adoption.",
+      "limitations": [
+        "The announcement feature is flag gated; customer usage and rollout coverage are not established by the public PRs."
+      ]
+    },
+    {
+      "id": "account-track-rules",
+      "initiativeId": "customer-analytics",
+      "title": "Previewable rules for which accounts stay visible",
+      "summary": "Added versioned account rules, a shared preview/execution compiler, controlled application, and recorded run history.",
+      "benefit": "Provides admins a tested way to replace stale one-off account updates with repeatable, inspectable rules.",
+      "dimension": "product",
+      "significance": 1,
+      "significanceRationale": "A concrete implemented capability with backend, frontend, and devbox validation. Rated bounded because the source explicitly starts rollout at 0%.",
+      "confidence": "documented",
+      "stage": "Implemented · flag at 0%",
+      "verified": true,
+      "evidenceIds": [
+        "pr-87301",
+        "issue-86654",
+        "code-87301-4e856e97a9698769b7940006e38514dad06341b6"
+      ],
+      "participants": [
+        {
+          "engineerId": "arthurdedeus",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-87301"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Use a small rollout to validate that preview results match admin expectations before enabling rules broadly.",
+      "limitations": [
+        "The feature flag starts at 0%; customer benefit has not been established."
+      ]
+    },
+    {
+      "id": "reusable-widgets",
+      "initiativeId": "notebook-widgets",
+      "title": "Reusable widgets with controlled shared updates",
+      "summary": "Added a searchable widget catalog, reviewed version publishing, pinned placements, and draft isolation for widgets reused across notebooks.",
+      "benefit": "Notebook authors can reuse a capability and propagate a reviewed improvement without copying notebook-local code or unexpectedly replacing pinned versions.",
+      "dimension": "product",
+      "significance": 3,
+      "significanceRationale": "Substantial product workflow spanning discovery, publication, versioning, and consumption, supported by functional tests and recorded browser checks. Usage is not measured.",
+      "confidence": "corroborated",
+      "stage": "Merged · validated capability",
+      "verified": true,
+      "evidenceIds": [
+        "pr-94104",
+        "review-4007586553",
+        "review-4013910136",
+        "code-94104-54af5fce4aea38299186cea5863ed0142d30dfdd"
+      ],
+      "participants": [
+        {
+          "engineerId": "mariusandra",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-94104"
+          ]
+        },
+        {
+          "engineerId": "sinan-ku",
+          "role": "Reviewer",
+          "rationale": "Identified source-data access, client bytecode, and draft/live-build isolation risks; the final implementation and tests address these paths.",
+          "evidenceIds": [
+            "review-4007586553",
+            "pr-94104",
+            "review-4013910136"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Validate the catalog with a small set of reusable internal widgets and review access checks at every reuse boundary.",
+      "limitations": [
+        "No public measurement of active users or saved authoring time. The review history is part of the outcome, not an approval-count signal."
+      ]
+    },
+    {
+      "id": "chart-test-simplification",
+      "initiativeId": "insight-maintainability",
+      "title": "One appropriate test layer for each chart behavior",
+      "summary": "Separated chart-only rendering from full-page testing and removed duplicate full-mount checks only after identifying surviving regression coverage.",
+      "benefit": "Product Analytics retains its chart behavior checks with less expensive, clearer test ownership.",
+      "dimension": "simplification",
+      "significance": 3,
+      "significanceRationale": "A subsystem-level simplification with named surviving coverage and before/after runtime, not credit for deleted lines or tests.",
+      "confidence": "documented",
+      "stage": "Reported local test comparison",
+      "verified": true,
+      "evidenceIds": [
+        "pr-68776",
+        "code-68776-2e2dd25ae69e1a2105caf39e572a070840540b65"
+      ],
+      "participants": [
+        {
+          "engineerId": "sampennington",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-68776"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "18.4 → ~11 s",
+          "label": "local insight suite",
+          "context": "Reported local wall time after test-harness and coverage consolidation; unrelated to overall CI duration.",
+          "evidenceIds": [
+            "pr-68776"
+          ]
+        }
+      ],
+      "followUp": "Apply the same coverage-mapping approach to other slow suites before deleting tests or adding more workers.",
+      "limitations": [
+        "Local test timing; the regression-coverage mapping is the justification for simplification."
+      ]
+    },
+    {
+      "id": "legacy-insight-converter",
+      "initiativeId": "insight-maintainability",
+      "title": "Retiring the unused insight conversion path",
+      "summary": "Removed the legacy filters-to-query converter after checking that no production caller remained, while preserving the live series helpers and their tests.",
+      "benefit": "Insight maintainers have one fewer obsolete transformation path to reason about, and module names match the functions callers actually use.",
+      "dimension": "simplification",
+      "significance": 3,
+      "significanceRationale": "A subsystem cleanup justified by caller analysis, preserved live exports, and test coverage across consumers. File or line deletion counts do not affect significance.",
+      "confidence": "documented",
+      "stage": "Merged · callers checked",
+      "verified": true,
+      "evidenceIds": [
+        "pr-100749",
+        "code-100749-58226454c33be5932d6915178a55f5523906aed2"
+      ],
+      "participants": [
+        {
+          "engineerId": "thmsobrmlr",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-100749"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Continue the legacy-insight removal only after verifying each remaining consumer and its surviving regression tests.",
+      "limitations": [
+        "Internal maintenance benefit; no measured user-performance or team-time gain."
+      ]
+    },
+    {
+      "id": "signals-measurement",
+      "initiativeId": "signals-followup",
+      "title": "One executable plan for checking whether a fix helped",
+      "summary": "Unified expected-impact goals and executable follow-up checks, with full post-resolution query windows, atomic replacement, and independent approval.",
+      "benefit": "A report's displayed measurement plan and its scheduled checks use the same records, reducing false claims based on pre-fix data or failed persistence.",
+      "dimension": "product",
+      "significance": 3,
+      "significanceRationale": "A substantial end-to-end product workflow with timing, permissions, concurrency, and rollback tests. Three dependent layers are grouped as one outcome.",
+      "confidence": "documented",
+      "stage": "Merged · staged rollout",
+      "verified": true,
+      "evidenceIds": [
+        "pr-110300",
+        "pr-110308",
+        "pr-109433",
+        "code-110300-0ac913a3c78942eb234f17401bf651a92129b2f8"
+      ],
+      "participants": [
+        {
+          "engineerId": "mikaylathompson",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-110300"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Audit a sample of resolved reports to verify that verdicts use a full post-fix window and that inconclusive results remain understandable.",
+      "limitations": [
+        "Rollout is staged and metric suggestions remain gated. No observed customer adoption or fix-success rate is claimed."
+      ]
+    },
+    {
+      "id": "parallel-node-tests",
+      "initiativeId": "node-test-feedback",
+      "title": "Parallel tests without wiping shared state",
+      "summary": "Moved eligible serial suites to isolated team fixtures and the parallel lane, preserving genuinely timing-sensitive cases in serial execution.",
+      "benefit": "Node developers wait less for the serial lane while avoiding cross-test interference in shared Postgres, Kafka, and Redis services.",
+      "dimension": "devex",
+      "significance": 3,
+      "significanceRationale": "A substantial test-workflow improvement with full-lane comparisons and explicit rejected migrations. The unmerged ingestion follow-up is not credited.",
+      "confidence": "documented",
+      "stage": "Reported local benchmark",
+      "verified": true,
+      "evidenceIds": [
+        "pr-89152",
+        "code-89152-2d3876221a47f058e71fa6ed7ab91b38afee4099"
+      ],
+      "participants": [
+        {
+          "engineerId": "benjackwhite",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-89152"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "553 → 348 s",
+          "label": "local serial lane",
+          "context": "Reported same-machine lane comparison; parallel lane changed from 79 to 81 seconds. CI hardware was not checked.",
+          "evidenceIds": [
+            "pr-89152"
+          ]
+        }
+      ],
+      "followUp": "Validate on CI hardware, then address the remaining worker-isolation constraints before moving more suites.",
+      "limitations": [
+        "Local timings. Follow-up PR #89866 was not merged at the snapshot and is excluded from scoring."
+      ]
+    },
+    {
+      "id": "replay-crash-loop",
+      "initiativeId": "replay-resilience",
+      "title": "A busy scrubber no longer takes its consumer down",
+      "summary": "Separated unavailable-sidecar failures from fatal consumer failures and handled batch deadlines and revoked-partition offset errors without terminating the consumer.",
+      "benefit": "Breaks a failure mechanism where a busy image scrubber causes consumer exits and rebalances that spread saturation to other pods.",
+      "dimension": "reliability",
+      "significance": 3,
+      "significanceRationale": "A concrete production failure mechanism documented with logs and addressed with targeted error-path tests. Rated 3 because a post-deploy recovery measurement is not available.",
+      "confidence": "documented",
+      "stage": "Merged · failure-path tests",
+      "verified": true,
+      "evidenceIds": [
+        "pr-73726",
+        "code-73726-e9d1ab1b72341278d8c726998b10f88a2399e3fd"
+      ],
+      "participants": [
+        {
+          "engineerId": "robbie-c",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-73726"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Check consumer restart rates alongside dropped-image counts to verify availability improved without hiding lost scrubbing work.",
+      "limitations": [
+        "The source records the pre-fix crash loop; it does not establish a measured post-rollout incident reduction."
+      ]
+    },
+    {
+      "id": "shared-query-database",
+      "initiativeId": "query-foundations",
+      "title": "One shared database build across query runners",
+      "summary": "Connected eight query runners to the existing shared per-run HogQL database, including SQL insights, events, people, groups, and session views.",
+      "benefit": "The shared foundation reaches consumers that previously bypassed it. Events and actor queries avoid constructing the same database twice in a run.",
+      "dimension": "leverage",
+      "significance": 3,
+      "significanceRationale": "Demonstrated adoption of a shared capability across multiple query surfaces, with tests asserting one database construction and preserved SQL semantics.",
+      "confidence": "documented",
+      "stage": "Merged · adoption tested",
+      "verified": true,
+      "evidenceIds": [
+        "pr-90965",
+        "code-90965-cf858241fb603ac33604dcac499aff33b6b9ef40"
+      ],
+      "participants": [
+        {
+          "engineerId": "georgemunyoro",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-90965"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "2 → 1",
+          "label": "builds in affected queries",
+          "context": "Events and validating actors queries are documented examples; seven parameterized runner tests check the shared path.",
+          "evidenceIds": [
+            "pr-90965"
+          ]
+        }
+      ],
+      "followUp": "Use the new build-trigger counter to find remaining callers that still construct the database redundantly.",
+      "limitations": [
+        "No measured fleet-wide latency reduction. Direct-connection queries intentionally keep their connection-scoped build."
+      ]
+    },
+    {
+      "id": "shared-uv-setup",
+      "initiativeId": "ci-maintainability",
+      "title": "One uv setup contract across CI workflows",
+      "summary": "Adopted a shared uv setup action across compatible GitHub and Depot steps, retaining explicit exceptions for workflows checking out older revisions.",
+      "benefit": "Routine uv upgrades no longer require duplicating the same version and cache wiring across most CI steps.",
+      "dimension": "simplification",
+      "significance": 3,
+      "significanceRationale": "Shared maintenance simplification backed by adoption and a structural comparison preserving workflow controls. No runtime speedup is claimed.",
+      "confidence": "documented",
+      "stage": "Merged · structural validation",
+      "verified": true,
+      "evidenceIds": [
+        "pr-96782",
+        "code-96782-8a698151baa6b58210139c99901c006ae0097565"
+      ],
+      "participants": [
+        {
+          "engineerId": "rnegron",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-96782"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "value": "49 / 64",
+          "label": "setup steps consolidated",
+          "context": "PR-reported setup-step adoption; 15 retain direct pins because their checkout may lack the composite action.",
+          "evidenceIds": [
+            "pr-96782"
+          ]
+        }
+      ],
+      "followUp": "Keep exceptions tied to checkout contracts so future migrations do not break workflows running older revisions.",
+      "limitations": [
+        "A maintainability result, not a measurement of CI minutes saved."
+      ]
+    },
+    {
+      "id": "shared-product-empty-state",
+      "initiativeId": "product-onboarding",
+      "title": "A reusable first-run experience inside each product",
+      "summary": "Introduced a shared product empty-state contract and adopted it in MCP Analytics, using real data-existence signals instead of dismissal flags.",
+      "benefit": "A first-time user can see product-specific setup in context, and the product becomes available when real data arrives.",
+      "dimension": "product",
+      "significance": 1,
+      "significanceRationale": "An implemented user workflow with one reference adoption. Broader adoption is not assumed from the presence of a reusable component.",
+      "confidence": "documented",
+      "stage": "Merged · reference adoption",
+      "verified": true,
+      "evidenceIds": [
+        "pr-72442",
+        "code-72442-e93c18db32bba4a920d87c377dd2625d69782761"
+      ],
+      "participants": [
+        {
+          "engineerId": "rafaeelaudibert",
+          "role": "Driver",
+          "rationale": "Authored and delivered the documented implementation; credit refers to the public contribution, including disclosed agent-assisted work.",
+          "evidenceIds": [
+            "pr-72442"
+          ]
+        }
+      ],
+      "metrics": [],
+      "followUp": "Evaluate the MCP Analytics setup flow before migrating other products to the shared gate.",
+      "limitations": [
+        "One reference adoption; no measured activation-rate improvement."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "pr-71477",
+      "type": "pr",
+      "title": "#71477 · feat(data-warehouse): point source authoring at the shared REST framework + add missing helpers",
+      "url": "https://github.com/PostHog/posthog/pull/71477",
+      "date": "2026-07-17T08:55:26Z",
+      "excerpt": "## Problem\n\nWe have ~432 implemented warehouse REST sources and a lot more in flight. A survey found heavy code duplication, but the root cause is **adoption, not a missing abstraction**: a full shared REST framework already exists in `common/rest_source/` (paginators, auth classes, a tracked+retrying `RESTClient`, declarative endpoints, fan-out), and `make_tracked_session()` already retries 429/5xx. Only ~31 of ~432 sources use it.\n\nThe reason the rest hand-roll everything: the `implementing-warehouse-sources` skill and the source-generation prompt both point new sources at `klaviyo`, which hand-rolls its client because it has genuine edge complexity (fan-out + resume, non-percent-encoded query strings, JSON:API flattening). Every generated source copied that boilerplate — including a redundant second retry layer on top of the transport's built-in retries. The skill also had factual drift and omitted patterns every real source uses.\n\n## Changes\n\n**Skill + template (root cause):**\n- Make `chargebee` the canonical reference (declarative `rest_source` + framework auth + resume); demote `klaviyo`/`github` to a bespoke-transport fallback. New \"Prefer the shared REST framework\" section listing what the framework gives for free and when hand-rolling is justified.\n- Fix the retry guidance: the tracked transport and `RESTClient` already retry 429/5xx honoring `Retry-After` — don't stack a second `tenacity` layer (the most-copied mistake).\n- Fix drift: `schema-general.ts` is PascalCase not kebab-case; icon convention is PNG not SVG; correct the `_is_host_safe` cross-reference; recon"
+    },
+    {
+      "id": "pr-72023",
+      "type": "pr",
+      "title": "#72023 · refactor(data-warehouse): migrate ~130 sources to rest_source + shared framework capabilities",
+      "url": "https://github.com/PostHog/posthog/pull/72023",
+      "date": "2026-07-21T10:27:15Z",
+      "excerpt": "## Problem\n\nMigrates ~130 hand-rolled data-warehouse source connectors onto the shared `common/rest_source` framework, removing large amounts of duplicated pagination, auth, resume, and schema-building code. This consolidates what was a stack of ~28 batch PRs into a single change on `master` (the individual batch PRs are superseded by this one).\n\n## Changes\n\n**Framework capabilities added to `common/rest_source`** (each was required by a cluster of migrations; all additive and opt-in):\n- Multi-level chained dependent resources + multiple resolve params bound from one parent row (fan-out beyond a single hop).\n- SSRF host-pinning: `client={\"allowed_hosts\": [...], \"allow_redirects\": False}` — off-host pagination/resume URLs and unexpected redirects are rejected before the request leaves the process.\n- Auth-secret redaction in raised exception messages (an api_key carried in a query param no longer leaks into `latest_error`).\n- `response_actions` `retry`/`raise` — classify a success-status body error envelope as retryable or as a permanent, actionable error.\n- `data_selector_malformed_retryable` — a 200 whose body isn't the expected list shape is retried rather than failing loud.\n\n**~130 sources migrated** onto `rest_api_resource` (behavior-preserving, coverage-first): each keeps its full test suite, reuses `validate_via_probe` / `build_endpoint_schemas` / resumable built-in paginators, and routes secrets through framework `auth`.\n\n**Reconciliation with master** (master evolved parts of this subsystem in parallel):\n- Kept master's newer `schema.py` (`schema_metadata`, `build_de"
+    },
+    {
+      "id": "code-71477-ccd039a0d31a582a68e66309fef1bf10ac3ebc4b",
+      "type": "code",
+      "title": "products/warehouse_sources/backend/temporal/data_imports/sources/common/test/test_source_helpers.py",
+      "url": "https://github.com/PostHog/posthog/blob/db590827de0155446fd1100cd14fd9607e03bb7f/products%2Fwarehouse_sources%2Fbackend%2Ftemporal%2Fdata_imports%2Fsources%2Fcommon%2Ftest%2Ftest_source_helpers.py",
+      "date": "2026-07-17T08:55:26Z",
+      "excerpt": "@@ -0,0 +1,143 @@\n+from unittest.mock import Mock\n+\n+import requests\n+from parameterized import parameterized\n+\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.errors import auth_non_retryable_errors\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.schema import (\n+    SourceSchema,\n+    build_endpoint_schemas,\n+    incremental_field,\n+)\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.source_helpers import validate_via_probe\n+from products.warehouse_sources.backend.types import IncrementalFieldType\n+\n+ENDPOINTS = (\"charges\", \"invoices\", \"events\")\n+INCREMENTAL_FIELDS = {\n+    \"charges\": [incremental_field(\"updated_at\")],\n+    \"invoices\": [incremental_field(\"created\", IncrementalFieldType.Date)],\n+    # \"events\" intentionally has no incremental fields (full-refresh only)\n+}\n+\n+\n+class TestIncrementalField:\n+    def test_defaults_type_and_label_from_field(self) -> None:\n+        assert incremental_field(\"updated_at\") == {\n+            \"label\": \"updated_at\",\n+            \"type\": IncrementalFieldType.DateTime,\n+            \"field\": \"updated_at\",\n+            \"field_type\": IncrementalFieldType.DateTime,\n+        }\n+\n+    def test_type_and_field_type_stay_in_sync(self) -> None:\n+        # The whole point of the helper: type == field_type, so they can't drift apart.\n+        f = incremental_field(\"created\", IncrementalFieldType.Date, label=\"Created\")\n+        assert f[\"label\"] == \"Created\"\n+        assert f[\"type\"] == f[\"field_type\"] == IncrementalFieldType.Date\n+\n+\n+class TestBuildEndpointSchemas:\n+    def test_matches_the_hand_written_loop(self) -> None:\n+        # Equivalent to the loop copy-pasted across ~421 sources — output must be identical.\n+        expected = [\n+            SourceS"
+    },
+    {
+      "id": "pr-69665",
+      "type": "pr",
+      "title": "#69665 · perf(warehouse-sources): speed up backend test suite ~12x",
+      "url": "https://github.com/PostHog/posthog/pull/69665",
+      "date": "2026-07-09T14:03:44Z",
+      "excerpt": "## Problem\n\nThe `products/warehouse_sources/backend` pytest suite (~22k tests) was dominated by avoidable fixed costs rather than test work: retry tests sleeping real tenacity exponential backoffs (one parameterized statuspage test slept ~920s by itself), botocore retry storms against an absent local object store, a ~15s clean-interpreter subprocess blocking one test, repeated PLY parser-table builds, per-test `mock.patch` overhead in autouse fixtures, and GC sweeping a large frozen heap far too often.\n\n## Changes\n\nSingle-process wall time for the service-free portion of the suite drops from ~20.5 min to ~1.6 min (~12x), with identical pass/skip/error outcomes. No tests removed, no assertions weakened. Every change either removes pointless waiting or caches/overlaps a fixed cost; the jsonpath and personhog changes also speed production sync loops and every product's CI suite respectively.\n\n- `sources/` conftest: autouse fixture caps `time.sleep` at 1ms (same thing ~20 test files already did individually via `tenacity.nap` patches)\n- webhook_s3 tests: fail-fast S3 client config + session-scoped reachability probe (absent store errors once, not per test; unchanged behavior when the store is up)\n- google-ads SDK-leak check: subprocess launches at session start (only when the test is selected in the shard) and overlaps the suite; the test just collects its verdict\n- `rest_source`: `lru_cache` for jsonpath compilation — `jsonpath_ng.parse()` rebuilds a PLY LR table per call, previously paid on every page of every paginated sync\n- personhog fake activation and the sleep cap use p"
+    },
+    {
+      "id": "code-69665-9b3ab84b11175ef9f8e5476787cd42d17c4df4e3",
+      "type": "code",
+      "title": "conftest.py",
+      "url": "https://github.com/PostHog/posthog/blob/9dfa2267e4e2d6cb85e508b2b0c8f3245378530b/conftest.py",
+      "date": "2026-07-09T14:03:44Z",
+      "excerpt": "@@ -22,6 +22,11 @@ def _end_gc_boot_window() -> None:\n     # reclaims only ~1MB, so the garbage gets frozen along with the survivors.\n     gc.freeze()\n     gc.enable()\n+    # Collect far less often than the default (700, 10, 10): test runs allocate heavily and\n+    # cyclic garbage is reclaimed fine at these thresholds, while frequent young-gen sweeps\n+    # over a large frozen heap cost real wall time (~10% of a unit-heavy suite; measured on\n+    # products/warehouse_sources with peak RSS within 1% of the default thresholds).\n+    gc.set_threshold(50_000, 20, 20)\n     # gc.get_referrers() cannot see referrers in the frozen permanent generation,\n     # which turns hypothesis's register_random() liveness check into a false positive\n     # for Randoms registered after the freeze (e.g. trio's module-level instance,"
+    },
+    {
+      "id": "pr-68639",
+      "type": "pr",
+      "title": "#68639 · feat(data-warehouse): OOM-driven repartition and delta maintenance",
+      "url": "https://github.com/PostHog/posthog/pull/68639",
+      "date": "2026-07-08T10:29:38Z",
+      "excerpt": "## Problem\n\nData warehouse incremental syncs OOM the import workers during the Delta merge, and the existing auto-repartition controller misses several cases.\nThree gaps.\nThe size budget is measured in compressed at-rest bytes, but the merge's memory is the decompressed Arrow working set, so tables with wide nested-JSON columns sit \"under budget\" yet still OOM.\nNothing records which tables actually OOM, so detection can only guess from size.\nAnd tombstone debt builds up on tables that OOM their merge (they never reach the post-load compaction), while a few tables end up with a corrupt `_delta_log` from an interrupted repartition swap and loop forever.\n\n## Changes\n\n- **OOM history.** New `ExternalDataSchemaOOMEvent` model, one row per detected pod heartbeat-timeout, recorded per Temporal retry at the point we already detect the timeout. A dedicated model rather than `sync_type_config` json, because a single job can OOM many times across retries and the json would grow unbounded.\n- **Hybrid repartition trigger.** Lowered the at-rest budget from ~1 GB to ~0.5 GB so it leaves headroom for concurrent merges on a shared 29 GB worker (a single OOM kills every co-tenant activity on the pod). Added an OOM-history override so a repeatedly-OOM'd table is repartitioned even when its compressed size looks fine, because its real working set (wide nested-JSON) is bigger than the at-rest size implies.\n- **Pre-merge vacuum.** Vacuum now runs on a delta-commit cadence before the merge, independent of merge success, so tables that OOM their merge still shed tombstones. Vacuum only deletes dea"
+    },
+    {
+      "id": "pr-72934",
+      "type": "pr",
+      "title": "#72934 · feat(data-warehouse): spill delta merges to disk to avoid OOMs",
+      "url": "https://github.com/PostHog/posthog/pull/72934",
+      "date": "2026-07-22T17:42:27Z",
+      "excerpt": "## Problem\n\nThe `data-warehouse` and `warehouse-sources-load` workers OOM when a delta-rs merge decompresses a large target partition into an Arrow working set that exceeds the 29 GB pod memory limit. Because the pods are multi-tenant (many activities per pod), a single OOM kills every co-tenant activity, not just the offending sync. The existing auto-repartition budget (`DATA_WAREHOUSE_TARGET_PARTITION_BYTES`) tries to keep the working set under the limit up front, but under-counts wide nested-JSON columns and rarely engages, so the OOMs keep happening on the tail of big-file tables.\n\n## Changes\n\nWire delta-rs `merge`'s `max_spill_size` / `max_temp_directory_size` parameters (available in deltalake 1.6.1) through two new settings. When set, delta-rs hands DataFusion a bounded memory pool: bytes past `max_spill_size` spill to its temp directory (the process `TMPDIR`), capped at `max_temp_directory_size`, instead of allocating unbounded and OOMing.\n\n- New settings `DATA_WAREHOUSE_DELTA_MERGE_MAX_SPILL_SIZE_BYTES` and `DATA_WAREHOUSE_DELTA_MERGE_MAX_TEMP_DIRECTORY_SIZE_BYTES`, both defaulting to `None`.\n- A `_delta_merge_spill_kwargs()` helper forwards them onto all three merge call sites (partitioned merge, unpartitioned merge, SCD2 close).\n- **No-op by default.** Left as `None`, the kwargs are omitted and DataFusion keeps its unbounded default — today's exact behavior — which also keeps this compatible with deltalake versions predating the parameters. Spill only turns on once the byte budgets *and* a scratch disk are provisioned on the worker pods (done in the companion cha"
+    },
+    {
+      "id": "pr-76349",
+      "type": "pr",
+      "title": "#76349 · fix(data-warehouse): coarsen over-split tables, harden the OOM trigger",
+      "url": "https://github.com/PostHog/posthog/pull/76349",
+      "date": "2026-08-05T14:47:32Z",
+      "excerpt": "## Problem\n\nAutomatic repartitioning only ever goes in one direction. It splits tables into smaller partitions and never merges them back, so every decision it gets wrong is permanent.\n\nIt gets them wrong often, because one of its two triggers fires on a signal that means \"the previous attempt stopped heartbeating\". That is what an OOM kill looks like, but it is also what a deploy, a pod eviction, a node drain and a heartbeat lost by a healthy worker look like, and none of those are fixed by smaller partitions. The result compounds: more partitions mean more per-partition merge commits, which makes the sync slower, which makes it likelier to trip the same timeout again.\n\nThis PR does not fix the signal itself (that is the follow-up, #76654). It bounds what the signal is allowed to do, and adds the missing direction so wrongly split tables can come back.\n\n## Changes\n\n**A floor under the OOM trigger.** A split has to land above `min_splittable_partition_bytes()`, which replaces the old 100x amplification guard. The floor is derived from the coarsening threshold, so the two directions cannot disagree about the same table: below it we would be splitting into a layout the coarsening path immediately wants to merge back. In practice a table's largest partition must be at least a quarter of the budget before the OOM trigger can act.\n\n**Coarsening.** An over-fragmented table is rebuilt into fewer, larger partitions, behind its own `data-warehouse-auto-coarsen` flag, reusing the existing rewrite, swap and claim-fencing machinery unchanged. Every candidate layout is computed from the"
+    },
+    {
+      "id": "review-3531208797",
+      "type": "review",
+      "title": "danielcarletti · material review on #68639",
+      "url": "https://github.com/PostHog/posthog/pull/68639#discussion_r3531208797",
+      "date": "2026-07-06T18:29:06Z",
+      "excerpt": "Rather than having both maintenance triggers write the watermark independently, let's collapse them into a single entry point so the watermark write exists exactly once.\n\nvacuum_table can't own the watermark — it's a DeltaTableHelper method and the watermark lives in schema.sync_type_config, which the helper (correctly) knows nothing about. Instead: add one run_maintenance(partition_count, last_vacuum_version, commit_threshold) -> int | None on the helper that does compact_if_fragmented first and only falls through to vacuum_if_stale when compaction didn't run (compact already vacuums, so it supersedes). It returns the single version-to-persist, and run_pre_write_defensive_compact remains the sole place that writes last_vacuum_version.\n\nThis gets us: one decision point, at most one vacuum per run (the fragmented+stale double-vacuum goes away structurally rather than via a short-circuit), one watermark write, and compact_table/vacuum_table keep their current signatures. The two triggers stay orthogonal — fragmentation vs. commit cadence — they just share their outcome state now."
+    },
+    {
+      "id": "review-3531381414",
+      "type": "review",
+      "title": "Gilbert09 · implementation response",
+      "url": "https://github.com/PostHog/posthog/pull/68639#discussion_r3531381414",
+      "date": "2026-07-06T18:58:12Z",
+      "excerpt": "Done in ac5ff16 — added `DeltaTableHelper.run_maintenance(partition_count, last_vacuum_version, commit_threshold)` as the single entry point: it runs `compact_if_fragmented` first and only falls through to `vacuum_if_stale` when compaction didn't run (compaction already vacuums), returning the single version to persist. `run_pre_write_defensive_compact` now delegates to it and remains the sole writer of `last_vacuum_version`."
+    },
+    {
+      "id": "code-68639-807936fda15be1b4e0b976b4fc60c077942dc2de",
+      "type": "code",
+      "title": "products/warehouse_sources/backend/temporal/data_imports/pipelines/common/test/test_extract.py",
+      "url": "https://github.com/PostHog/posthog/blob/67b44a6656aafd1ad5ae1a013aa16caaa6c4376d/products%2Fwarehouse_sources%2Fbackend%2Ftemporal%2Fdata_imports%2Fpipelines%2Fcommon%2Ftest%2Ftest_extract.py",
+      "date": "2026-07-08T10:29:38Z",
+      "excerpt": "@@ -1,9 +1,20 @@\n+import uuid\n+from datetime import UTC, datetime, timedelta\n+\n import pytest\n+from posthog.test.base import BaseTest\n from unittest.mock import AsyncMock, MagicMock, patch\n \n+from asgiref.sync import async_to_sync\n from parameterized import parameterized\n \n+from products.warehouse_sources.backend.models.external_data_job import ExternalDataJob\n+from products.warehouse_sources.backend.models.external_data_schema import ExternalDataSchema\n+from products.warehouse_sources.backend.models.external_data_source import ExternalDataSource\n+from products.warehouse_sources.backend.models.oom_event import ExternalDataSchemaOOMEvent\n from products.warehouse_sources.backend.temporal.data_imports.pipelines.common.extract import (\n+    handle_corrupted_delta_log,\n+    report_heartbeat_timeout,\n     run_pre_write_defensive_compact,\n )\n \n@@ -13,7 +24,7 @@\n class TestRunPreWriteDefensiveCompact:\n     @parameterized.expand(\n         [\n-            # (schema_partition_count, resource_partition_count, expected_passed_to_compact)\n+            # (schema_partition_count, resource_partition_count, expected_passed_to_run_maintenance)\n             (\"schema_value_wins\", 10, 72, 10),\n             (\"falls_back_to_resource\", None, 72, 72),\n             (\"both_none_passes_none\", None, None, None),\n@@ -23,30 +34,157 @@ class TestRunPreWriteDefensiveCompact:\n     async def test_resolves_partition_count_schema_over_resource(\n         self, _name: str, schema_count: int | None, resource_count: int | None, expected: int | None\n     ):\n-        compact = AsyncMock(return_value=False)\n-        helper = MagicMock(compact_if_fragmented=compact)\n+        run_maintenance = AsyncMock(return_value=None)\n+        helper = MagicMock(run_maintenance=run_maintenance)\n \n         await run_pre_write_defe"
+    },
+    {
+      "id": "pr-72929",
+      "type": "pr",
+      "title": "#72929 · feat(warehouse-sources): reuse synced parent tables for fan-out endpoints",
+      "url": "https://github.com/PostHog/posthog/pull/72929",
+      "date": "2026-08-14T14:35:55Z",
+      "excerpt": "## Problem\n\nA customer syncing a fan-out endpoint pays to download the same parent list over and over. Selecting Sentry's `issues` plus its three children pulls the full issues list four times per cycle. That burns their vendor API quota, trips rate limits, and slows every child sync. Fleet-wide the duplication is large: Stripe's customer children alone re-enumerate full customer lists hundreds of thousands of times a month.\n\nThe cause is that each schema syncs as its own independent Temporal run, so nothing shares the parent fetch.\n\nThe parent's rows are already sitting in the warehouse as a Delta table after the parent schema syncs. dlt and Airbyte solve duplicate parent reads by coordinating parent and children in one extract; we can instead read the parent back from the destination, which keeps the one-schema-one-run model untouched.\n\n## Changes\n\nEverything is gated by the `warehouse-fanout-parent-reuse` feature flag - flag off means byte-identical legacy behavior, so rollout and rollback are a flag flip.\n\n\n\n\n\n- **Warehouse parent reader** (`common/rest_source/warehouse_parent.py`): streams a parent schema's Delta table as `list[dict]` pages shaped like REST parent pages. Takes API field names, maps to the snake_case physical columns, re-keys rows back. Pins one Delta snapshot for the whole fan-out. A parent whose newest job is mid-sync **or died mid-write** pins to its last completed job's version, so the child never reads a torn table; a completed newest job reads the latest version, so a pin can never point at files a later compaction vacuumed.\n- **Opt-in flag on the"
+    },
+    {
+      "id": "pr-83322",
+      "type": "pr",
+      "title": "#83322 · fix(warehouse-sources): make the fan-out drift signals countable per schema",
+      "url": "https://github.com/PostHog/posthog/pull/83322",
+      "date": "2026-08-14T19:04:51Z",
+      "excerpt": "## Problem\n\nWhoever decides how far to roll out warehouse parent reuse can't measure the thing the decision turns on. The rollout question is whether a parent snapshot drifts above what the vendor still lists ([#72929](https://github.com/PostHog/posthog/pull/72929), plan phase 1.5), which needs stale parents counted against parent rows read. Neither number is usable today for a child converted through the shared fan-out builder.\n\n- The row count logs with `\"schema\": null` for those children, because the builder never passes the child's name to the reader. Seen on the first production run, team 2 at 16:40 UTC today: `issue_tag_values` logged its name, `issue_events` and `issue_hashes` logged `null`.\n- The stale count doesn't exist on that path at all. A parent the vendor dropped is discarded by the injected `404 → ignore` action, which logged one unstructured line with no schema and no count.\n- The row count is also lost entirely when a consumer stops early, which is what a resumable child does every time it checkpoints mid-fan-out.\n\n## Changes\n\n- The ignore hook logs `data_imports.response_action_ignored` with the resource name, so stale parents are countable per schema. That is the drift numerator on the builder path.\n- The reader logs its row count from a `finally`, with an `outcome` of `completed`, `stopped` or `failed`. Only a completed scan carries a full count, so a crash cannot be read as a clean early stop and shrink the denominator.\n- `build_dependent_resource` passes the child endpoint name to the reader, which fixes the `null` label.\n- `schema_name` is now requir"
+    },
+    {
+      "id": "review-3681706749",
+      "type": "review",
+      "title": "estefaniarabadan · material review on #72929",
+      "url": "https://github.com/PostHog/posthog/pull/72929#discussion_r3681706749",
+      "date": "2026-07-30T09:48:56Z",
+      "excerpt": "could we be causing issues here? if the customer doesn't want to sync the parent, could they incur in billing increase with this? 🤔 "
+    },
+    {
+      "id": "review-3682898446",
+      "type": "review",
+      "title": "danielcarletti · implementation response",
+      "url": "https://github.com/PostHog/posthog/pull/72929#discussion_r3682898446",
+      "date": "2026-07-30T13:05:58Z",
+      "excerpt": "AI reply: Really good catch, and it changed the design in 15802fd. You're right that silently enabling the parent silently grows billed rows synced (billing is `Sum(rows_synced)` over `billable=True` jobs, and schedule-fired runs are always billable). So the auto-enable is gone: enabling a child whose parent is disabled now refuses with \"Enable 'issues' first. Rows synced by 'issues' count toward your usage.\" — same rule at source creation. Enabling the parent is always the customer's own action, never a side effect.\n\nScale check against prod mirrors: only 1/126 (US) + 1/84 (EU) Sentry sources have a child enabled without the parent — 99% of fan-out users already sync and pay for the parent, so this refusal affects almost nobody while protecting exactly the people who deliberately disabled the parent. (Stripe, for the later phase: 3/2,164.) Two further mitigations if we ever want them: new sources get the 7-day free-historical window (the parent's initial backfill wouldn't bill), and `ExternalDataJob.billable` already exists per-job if product ever decides dependency-parent syncs should be free — but that's a pricing decision, not one this PR should make."
+    },
+    {
+      "id": "code-72929-aec03a5514ce046e0556371d9548cc456eafc8be",
+      "type": "code",
+      "title": "products/warehouse_sources/backend/temporal/data_imports/sources/common/rest_source/tests/test_warehouse_parent.py",
+      "url": "https://github.com/PostHog/posthog/blob/def0230968c01ad5c7dc4142d36a4a4cc1dbeadd/products%2Fwarehouse_sources%2Fbackend%2Ftemporal%2Fdata_imports%2Fsources%2Fcommon%2Frest_source%2Ftests%2Ftest_warehouse_parent.py",
+      "date": "2026-08-14T14:35:55Z",
+      "excerpt": "@@ -0,0 +1,248 @@\n+from datetime import UTC, datetime, timedelta\n+from pathlib import Path\n+from types import SimpleNamespace\n+from typing import Any\n+\n+import pytest\n+from posthog.test.base import APIBaseTest\n+from unittest.mock import patch\n+\n+import pyarrow as pa\n+import deltalake\n+from parameterized import parameterized\n+\n+from products.warehouse_sources.backend.facade.models import ExternalDataJob, ExternalDataSchema, ExternalDataSource\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.rest_source import warehouse_parent\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.rest_source.warehouse_parent import (\n+    ParentTableRef,\n+    WarehouseParentTableNotFoundError,\n+    iter_parent_pages_from_warehouse,\n+    resolve_parent_table_ref,\n+)\n+\n+\n+def _write_parent_table(tmp_path: Path) -> str:\n+    uri = str(tmp_path / \"issues\")\n+    # Physical columns are snake_case — the Delta writer normalizes API field names.\n+    table = pa.table(\n+        {\n+            \"id\": [\"1\", \"2\", \"3\"],\n+            \"last_seen\": [\"2026-03-01\", \"2026-03-03\", \"2026-03-02\"],\n+            \"title\": [\"a\", \"b\", \"c\"],\n+        }\n+    )\n+    deltalake.write_deltalake(uri, table)\n+    return uri\n+\n+\n+def _patched_reader(uri: str, version: int | None = None, **kwargs):\n+    ref = ParentTableRef(uri=uri, version=deltalake.DeltaTable(uri).version() if version is None else version)\n+    with patch.object(warehouse_parent, \"delta_storage_options\", return_value={}):\n+        return list(iter_parent_pages_from_warehouse(table=ref, parent_name=\"issues\", **kwargs))\n+\n+\n+def _patched_resolve(uri: str, snapshot_timestamp=None):\n+    parent_schema = SimpleNamespace(\n+        id=\"parent-id\", normalized_s3_folder_name=\"issues\", folder_path=lambda: \"team_1_se"
+    },
+    {
+      "id": "pr-70018",
+      "type": "pr",
+      "title": "#70018 · feat(data-warehouse): add vendor API versioning framework for warehouse sources",
+      "url": "https://github.com/PostHog/posthog/pull/70018",
+      "date": "2026-07-15T21:28:39Z",
+      "excerpt": "## Problem\n\nVendors ship new API versions and our warehouse sources silently rot on old ones. We're building automation that detects new vendor API versions and opens PRs adding support for them, but sources have no first-class notion of an API version today: what a source implements is buried in hardcoded URLs and headers, nothing records which version a customer's source syncs with, and there is no way to add a new version without changing behavior for everyone at once.\n\n## Changes\n\n**Versioning declarations on every source.** `_BaseSource` gains `supported_versions` (opaque vendor labels, never parsed or ordered), `default_version`, `api_docs_url` (the vendor's API changelog page, distinct from the posthog.com `docsUrl`), and `deprecated_versions` (per-version `deprecated` + `sunset_at` metadata). Unversioned vendors (SQL databases, file stores) inherit the `\"v1\"` default untouched. All 217 released sources are seeded with the version their code currently implements, read from their URLs/headers/SDK pins (e.g. Stripe `2024-09-30.acacia`, Klaviyo `2024-10-15`, Shopify `2025-10`, Meta Ads `v25.0`), plus the vendor API docs URL.\n\n**A version pin per source instance.** `ExternalDataSource` gets a nullable `api_version` column. A dedicated column rather than `job_inputs` because `job_inputs` is encrypted at rest, and the pin must be queryable: it's exposed in the `data_warehouse_sources` HogQL system table. New sources are stamped with the source type's `default_version` at creation, a data migration backfills every existing row with its source's current version (frozen mappi"
+    },
+    {
+      "id": "code-70018-b60ab94e125ab299c2969980b230d8019a71d815",
+      "type": "code",
+      "title": "products/warehouse_sources/backend/temporal/data_imports/sources/tests/test_source_versions.py",
+      "url": "https://github.com/PostHog/posthog/blob/254a294f736a9a1b6e203e6160a96267c05219ea/products%2Fwarehouse_sources%2Fbackend%2Ftemporal%2Fdata_imports%2Fsources%2Ftests%2Ftest_source_versions.py",
+      "date": "2026-07-15T21:28:39Z",
+      "excerpt": "@@ -0,0 +1,52 @@\n+import pytest\n+\n+import products.warehouse_sources.backend.temporal.data_imports.sources._load_all  # noqa: F401\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.base import VersionDeprecation\n+from products.warehouse_sources.backend.temporal.data_imports.sources.common.registry import SourceRegistry\n+\n+ALL_SOURCES = SourceRegistry.get_all_sources()\n+SOURCE_TYPES = sorted(ALL_SOURCES.keys(), key=str)\n+\n+\n+@pytest.mark.parametrize(\"source_type\", SOURCE_TYPES, ids=str)\n+def test_every_source_declares_valid_versions(source_type):\n+    source = ALL_SOURCES[source_type]\n+\n+    assert isinstance(source.supported_versions, tuple), (\n+        f\"{source_type}: supported_versions must be a tuple of version strings\"\n+    )\n+    assert len(source.supported_versions) > 0, f\"{source_type}: supported_versions must not be empty\"\n+    assert all(isinstance(v, str) and v for v in source.supported_versions), (\n+        f\"{source_type}: every supported version must be a non-empty string\"\n+    )\n+    assert len(set(source.supported_versions)) == len(source.supported_versions), (\n+        f\"{source_type}: supported_versions contains duplicates\"\n+    )\n+    assert source.default_version in source.supported_versions, (\n+        f\"{source_type}: default_version {source.default_version!r} is not in supported_versions — \"\n+        f\"a missing pin would resolve to a version the source does not implement\"\n+    )\n+\n+    assert all(isinstance(d, VersionDeprecation) for d in source.deprecated_versions), (\n+        f\"{source_type}: deprecated_versions must contain VersionDeprecation entries\"\n+    )\n+    deprecated = {d.version for d in source.deprecated_versions}\n+    assert deprecated <= set(source.supported_versions), (\n+        f\"{source_type}: deprecat"
+    },
+    {
+      "id": "pr-91646",
+      "type": "pr",
+      "title": "#91646 · feat(devex): squash pre-2026-09-07 Django migration history with nextgensquash",
+      "url": "https://github.com/PostHog/posthog/pull/91646",
+      "date": "2026-09-08T08:45:43Z",
+      "excerpt": "## Problem\n\n- A fresh-database migrate — every CI shard, dev bootstrap, and new instance — replays about 2,500 migrations and takes about 20 minutes. In May it took 6.\n- About 90 percent of that time is Django rebuilding migration state, which grows with migration count times model count.\n- Two earlier squash attempts did not land ([#48267](https://github.com/PostHog/posthog/pull/48267), [#60518](https://github.com/PostHog/posthog/pull/60518)). The second had the right design and stalled on CI blockers and a `replaces` lineage flaw. This PR is that design, fixed.\n\n## Changes\n\n- A fresh database now migrates in about 5 minutes. Each app's pre-cutoff history (cutoff 2026-09-07) folds into generated squash files, and only those plus the newer migrations apply.\n- Every app keeps at least 3 live migrations after the squash (`--min-young`). A pure date cutoff made the squash the tip of every dormant app; the tool now moves the newest pre-cutoff migrations back to young, and refuses to move a migration that another app's folded history depends on or that carries a cross-app state move (splitting a `SeparateDatabaseAndState` pair leaves a table created twice, which an emit-time single-owner check now also catches).\n- A folded migration whose raw SQL creates a constraint or index that a live migration still references also moves to the young set. Forwarded raw SQL lands in `schema_addons`, which runs after the young chain, so a young `ValidateForeignKey` against it fails on every fresh database. State-backed names (`AddIndex`/`AddConstraint`) are exempt since the initial squash crea"
+    },
+    {
+      "id": "pr-96400",
+      "type": "pr",
+      "title": "#96400 · fix(devex): forget squash addons rows when restoring a schema dump",
+      "url": "https://github.com/PostHog/posthog/pull/96400",
+      "date": "2026-09-08T10:17:07Z",
+      "excerpt": "## Problem\n\n- Every Playwright E2E job fails since the migration squash merged (#91646), on master ([run](https://github.com/PostHog/posthog/actions/runs/34206267216)) and on every PR, and `hogli db:restore-schema` breaks a developer's database the same way.\n- `migrate` stops before it applies anything: `InconsistentMigrationHistory: Migration ai_observability.0045_squash_2026_09_07_schema_addons is applied before its dependency stamphog.0001_squash_2026_09_07_initial`.\n- The dump itself is consistent. `hogli db:restore-schema-fresh` then deletes the `django_migrations` rows of the product-routed apps (stamphog, visual_review, warehouse_sources_queue), so a consumer without product databases replays them under its own routing.\n- Since the squash, every generated `schema_addons` migration depends on the leaf squash of every squashed app, the product-routed ones included. Keeping those rows while their dependency rows are gone is what the check rejects.\n\n## Changes\n\n- The restore now forgets the `*_squash_*_schema_addons` rows together with the product-app rows. The next `migrate` replays the product apps and then the addons in dependency order; the addons only probe the schema and skip, so the replay costs seconds.\n- Mechanical: one DELETE clause, one docstring paragraph, one assertion in the existing restore test.\n\n## How did you test this code?\n\n- Restored master's `migrated-schema` artifact into a scratch database, ran the exact DELETE the command now issues, then `migrate`: 30 migrations replay in about 30 s, a second `migrate` is a no-op. Without the addons clause the s"
+    },
+    {
+      "id": "pr-96430",
+      "type": "pr",
+      "title": "#96430 · fix(devex): drop forwarded index creates that a UNIQUE USING INDEX consumed",
+      "url": "https://github.com/PostHog/posthog/pull/96430",
+      "date": "2026-09-08T13:14:30Z",
+      "excerpt": "## Problem\n\n- Every database that migrates through the squash builds a second unique index on `posthog_errortrackingstackframe`. Prod paid 15 minutes (EU) and 40 minutes (US) of concurrent index build during the first deploy after #91646, and every fresh database (CI, hobby) builds it too.\n- error_tracking `0004` created `idx_team_id_raw_id_part`, then `0005` ran `ADD CONSTRAINT unique_team_id_raw_id_part UNIQUE USING INDEX idx_team_id_raw_id_part`, which renames the index. The squash forwarded the create anyway; `IF NOT EXISTS` never sees the renamed index.\n- Four taggeditem creates in `posthog/1345` and one in `notebooks/0019` have the same shape with equal names, so they were dead rather than harmful.\n\n## Changes\n\n- `error_tracking/0033_squash_2026_09_07_schema_addons` keeps its name with no operations. Fresh databases stop building the duplicate. The file stays because prod, dev and the CI dumps record it as applied and every other addons file depends on it.\n- `posthog/1345` and `notebooks/0019` are the regenerated files from the fixed tool: five dead `CREATE UNIQUE INDEX` forwards removed, nothing else changes.\n- The tool fix is [django-nextgensquash PR 1](https://github.com/PostHog/django-nextgensquash/pull/1) (`337e949`): a forwarded create that a later `UNIQUE USING INDEX` consumes is cancelled like a matching `DROP`.\n- No cleanup migration on purpose: the live duplicates in EU and US were swapped under the constraint by hand, and a migration would fold into the next squash.\n\n## How did you test this code?\n\n- Re-emitted the whole tree with the fixed tool from the pr"
+    },
+    {
+      "id": "pr-96466",
+      "type": "pr",
+      "title": "#96466 · chore(team-deletion): drop the retired-table predelete test",
+      "url": "https://github.com/PostHog/posthog/pull/96466",
+      "date": "2026-09-08T11:15:51Z",
+      "excerpt": "## Problem\n\n- Every Trunk batch on master's schema dump fails the Temporal shard since the squash (#91646) landed: `relation \"ee_single_session_summary\" does not exist` in `test_retired_table_predelete.py` ([batch run](https://github.com/PostHog/posthog/actions/runs/34215809723/job/102033313536)).\n- The test inserts into three retired tables that replay `0002` removed from Django state only. They exist in databases that ran the old migration chain (prod), and in no database built from model state. Since this morning every CI database is built from model state.\n- The test therefore asserts a history-shaped schema, not application behavior, and can only pass on a database that predates the squash.\n\n## Changes\n\n- Delete the test. The behavior it covered stays in the code: `_delete_retired_session_summaries_for_teams` checks `to_regclass` and skips an absent table, and prod keeps its tables until the planned drop migration removes them together with the helper (#83306).\n\n## How did you test this code?\n\n- Confirmed the failure is the missing table on a squash-built database, and that the same test passes on a pre-squash dump, which is why it stayed green on PR runs until now.\n- Not run: the Temporal shard locally; CI covers it.\n\n## Automatic notifications\n\n- [ ] Publish to changelog?\n\n## Docs update\n\nNone."
+    },
+    {
+      "id": "pr-99932",
+      "type": "pr",
+      "title": "#99932 · fix(devex): let partially migrated databases migrate after the squash",
+      "url": "https://github.com/PostHog/posthog/pull/99932",
+      "date": "2026-09-14T11:23:25Z",
+      "excerpt": "## Problem\n\nDatabases last migrated before the migration squash (#91646) can no longer run `migrate`. This covers local dev databases, prewarmed devbox images and self-hosted installs that upgrade from an older version.\n\n- Such a database applied only part of the range the posthog squash replaces, so Django drops the squash and uses the original files.\n- In that fallback, Django moves every child of the squash onto the last replaced migration, `posthog.1340`.\n- The squash declares `run_before = [(\"oauth2_provider\", \"0001_initial\")]`, which makes that migration a child. The result is `Migration oauth2_provider.0001_initial is applied before its dependency posthog.1340_drop_userproductlist_reason_columns`.\n- With that removed, the fallback also leaves `0000_squash_stub` without a child in posthog. The result is `Conflicting migrations detected; multiple leaf nodes (0000_squash_stub, 1352_...)`.\n- CI builds fresh databases or restores fully migrated dumps, so it never takes the fallback.\n\n## Changes\n\n- Partially migrated databases migrate again. Fresh and fully migrated databases apply the same plan as before.\n- The squash initial no longer declares `run_before`. `posthog.0745` declares the same entry, and the loader moves it onto the squash when it substitutes.\n- The `finalize_fks` tail now depends on `0000_squash_stub`. The tail runs after the whole replaced range, so no already-applied migration gets a new parent.\n- A new repo invariant checks both rules for every squash.\n- PostHog/django-nextgensquash#3 makes the emitter produce both, so the next squash does not bring the "
+    },
+    {
+      "id": "code-91646-78f0c214890e91f159f03eaae01325bdaf90182c",
+      "type": "code",
+      "title": "posthog/conftest.py",
+      "url": "https://github.com/PostHog/posthog/blob/90e9649fbe68a2df02e14782a247d44d3729c0c5/posthog%2Fconftest.py",
+      "date": "2026-09-08T08:45:43Z",
+      "excerpt": "@@ -1,5 +1,6 @@\n import os\n import time\n+import warnings\n import subprocess\n from collections.abc import Callable\n from functools import partial\n@@ -385,6 +386,23 @@ def _django_db_setup(django_db_keepdb, django_db_blocker):\n \n     create_clickhouse_tables()\n \n+    # Seed default data that historically lived in RunPython migrations. Squashed\n+    # migrations drop those ops, so without this tests relying on the defaults\n+    # (Billing Team auth group, Default DataColorTheme, starter DashboardTemplates)\n+    # would fail on a fresh test DB. Tolerated: in some shards (e.g. temporal\n+    # async tests that only need the persons DB) the default DB schema isn't\n+    # fully migrated yet — skip seeding rather than break setup.\n+    with django_db_blocker.unblock():\n+        from django.core.management import call_command\n+\n+        try:\n+            call_command(\"ensure_migration_defaults\", verbosity=0)\n+        except Exception as exc:\n+            warnings.warn(\n+                f\"ensure_migration_defaults skipped during test DB setup: {exc}\",\n+                stacklevel=2,\n+            )\n+\n     yield\n \n     if django_db_keepdb:"
+    },
+    {
+      "id": "pr-70648",
+      "type": "pr",
+      "title": "#70648 · feat(devex): let light worktrees borrow toolchain from main clone",
+      "url": "https://github.com/PostHog/posthog/pull/70648",
+      "date": "2026-07-15T06:51:38Z",
+      "excerpt": "## Problem\n\nCreating a worktree for a small change is disproportionately heavy. A plain `git worktree add` bootstraps a ~343 MB root pnpm install just so pre-commit hooks can run, and committing any Python file still fails outright because there is no venv for `bin/hogli` (and `uv run` would silently build a full ~2.3 GB `.venv` in the worktree). The alternative, a full flox setup per worktree, costs several GB of node_modules plus flox cache each time. Sharing deps at the package-manager level was tried before with `enableGlobalVirtualStore` (#57452) and reverted the same day (#57638) because it broke Vite dependency resolution and could not be opted out per user.\n\n## Changes\n\nLight worktrees now borrow the main clone's toolchain instead of installing their own, guarded by lockfile equality:\n\n- New `bin/helpers/worktree-borrow.sh`, sourced by the husky hooks. In a linked worktree without local installs it puts the main clone's `.flox/run/*/bin` (pnpm, node, uv), `node_modules/.bin`, and venv on `PATH`, but only while the worktree's `pnpm-lock.yaml` / `uv.lock` are byte-identical to the main clone's. On mismatch it prints what to install and everything falls back to today's behavior. Local installs always win over borrowing.\n- `.husky/post-checkout` skips the bootstrap install when borrowing applies. Hooks source the helper relative to the hook file, which works whether git resolves `core.hooksPath` against the main clone (git 2.53 default with husky's relative `.husky`) or per worktree.\n- `bin/hogli` gains the main clone's venv as a guarded fallback, so hook commands work "
+    },
+    {
+      "id": "code-70648-3bab9418f332ea2fe744e17e909e3e1d3177974f",
+      "type": "code",
+      "title": "bin/helpers/worktree-borrow.sh",
+      "url": "https://github.com/PostHog/posthog/blob/8249c2277471ae3bba56bc8dbc2eb1d25b9fbf40/bin%2Fhelpers%2Fworktree-borrow.sh",
+      "date": "2026-07-15T06:51:38Z",
+      "excerpt": "@@ -0,0 +1,91 @@\n+#!/bin/sh\n+# Functions that let a plain `git worktree add` checkout run lint-staged /\n+# hogli / ruff / ty without its own node_modules or venv -- by borrowing the\n+# main clone's, but only when the worktree's lockfiles match the main clone's\n+# exactly. A mismatch means the worktree's branch changed deps, so borrowing\n+# would silently run the wrong versions -- callers fall back to today's\n+# behavior (local install) in that case.\n+#\n+# POSIX sh; sourced by the husky hooks and by bin/hogli (bash). Sourcing this\n+# file has no side effects -- callers invoke the functions below. Never\n+# `exit`s or `set -e`s since it runs inside the caller's shell.\n+\n+# Echo the main clone root for the repo root given as $1, or nothing when $1\n+# is not a linked worktree. Linked worktrees have a `.git` file (pointing at\n+# the main clone's .git dir), not a `.git` directory.\n+posthog_main_repo() {\n+    [ -f \"$1/.git\" ] || return 0\n+    _ph_common=\"$(git -C \"$1\" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)\" || return 0\n+    _ph_main=\"$(dirname \"$_ph_common\")\"\n+    if [ \"$_ph_main\" != \"$1\" ]; then\n+        echo \"$_ph_main\"\n+    fi\n+    return 0\n+}\n+\n+# Echo the first venv that exists under the root given as $1, or nothing.\n+posthog_find_venv() {\n+    for _ph_venv in \"$1/.flox/cache/venv\" \"$1/.venv\" \"$1/env\"; do\n+        if [ -d \"$_ph_venv\" ]; then\n+            echo \"$_ph_venv\"\n+            return 0\n+        fi\n+    done\n+    return 0\n+}\n+\n+# Borrow the main clone's toolchain into the current shell's environment.\n+# Must be called with cwd = repo root (the hooks guarantee that). Scope $1 is\n+# `node` or `all` (default): post-checkout only needs the node borrow, so it\n+# skips the venv work (including the uv.lock compare, which isn't free).\n+posthog_worktre"
+    },
+    {
+      "id": "pr-68859",
+      "type": "pr",
+      "title": "#68859 · feat(devex): auto-preview frontend-touching PRs on hogbox",
+      "url": "https://github.com/PostHog/posthog/pull/68859",
+      "date": "2026-07-07T10:15:49Z",
+      "excerpt": "Stacked on #62672 (base = its branch; will retarget to master once it merges). Greenlit by Julian off a 14-day PR survey.\n\n**What changes:** previews stop being opt-in. A same-repo, human, non-draft PR gets a hogbox preview automatically when its diff touches frontend paths (frontend/**, products/*/frontend/**, common/esbuilder/**). The `hogbox-preview` label still forces a preview for any paths; a new `no-preview` label opts out (and tears down a live preview when added). Draft→ready creates the preview; fork PRs never build.\n\n**Why:** the survey says ~57 frontend-touching human PRs/day (34% of human-ready volume), median 4 pushes each, ~85-115 concurrently open at peak — and the label has had effectively zero organic adoption (2 PRs ever, one being the feature PR itself). Opt-in app previews are dead on arrival; the only always-on frontend feedback today is Storybook screenshots. Affordability comes from hibernation, which the tool already wires: pens are created with on_idle=hibernate + wake=on-request (now also re-asserted on every update so a preview can't drift always-on) — that's ~170-340 box-hours/day and ~15-25 warm VMs at peak vs ~2,000 box-hours/~90 warm always-on.\n\n**Design notes for reviewers:**\n- Eligibility lives in a cheap credential-free `decide` job (github-script, no checkout/tailnet/token), not an `on.paths` filter — a path filter would kill the label-only flow for backend PRs.\n- There is deliberately NO workflow-level concurrency: the cancelable per-PR group sits on the preview/teardown jobs only, so a no-op event (unrelated label churn) can never cance"
+    },
+    {
+      "id": "code-68859-4fe5487f2e65023780c3c35a6589e5c3018d0705",
+      "type": "code",
+      "title": ".github/workflows/hogbox-preview-env.yml",
+      "url": "https://github.com/PostHog/posthog/blob/b284272880742b4ac59da1ad8e561935da31171e/.github%2Fworkflows%2Fhogbox-preview-env.yml",
+      "date": "2026-07-07T10:15:49Z",
+      "excerpt": "@@ -20,38 +20,57 @@\n # frontend/dist. If a PR's migrations are incompatible with the baseline, fall\n # back to --reset-db.\n #\n+# --- TRIGGER (who gets a preview) -----------------------------------------------\n+# The `decide` job (cheap, credential-free) is the gate. A same-repo, human,\n+# ready (non-draft) PR gets a preview when it carries the `hogbox-preview` label\n+# (manual opt-in, ANY paths) OR its diff touches the frontend (frontend/**,\n+# products/*/frontend/**, common/esbuilder/**). The `no-preview` label opts out.\n+# Auto-previews for frontend PRs are org-visible default behavior; the opt-out +\n+# hibernation (below) keep them cheap. See the trigger notes on `on.pull_request`.\n+#\n # --- LIFECYCLE ------------------------------------------------------------------\n-#   - build/update: this workflow, on a labeled PR's push (and manual dispatch).\n-#   - teardown on PR close + the daily stale-sweep: folded into pr-cleanup.yml\n-#     (cleanup-hogbox-preview), invoked from pr-closed.yml — same place hobby's\n-#     teardown lives. The GitHub Deployment/environment (preview-pr-<n>) is reaped\n-#     by pr-cleanup.yml's existing deployment cleanup.\n-#   - teardown on label removal: the teardown job below (fast path; the cron is\n-#     the backstop).\n+#   - build/update: this workflow's `preview` job, once `decide` says build.\n+#   - teardown on PR close + the daily stale-sweep: pr-closed.yml (box + pen) +\n+#     hogbox-preview-cleanup.yml's cron. The GitHub Deployment/environment\n+#     (preview-pr-<n>) is reaped by pr-cleanup.yml's existing deployment cleanup.\n+#   - teardown fast path: the `teardown` job below fires when `hogbox-preview` is\n+#     removed OR `no-preview` is added (the cron is the backstop).\n #\n # --- PREREQS (tracked out of band) -----------------------"
+    },
+    {
+      "id": "pr-74117",
+      "type": "pr",
+      "title": "#74117 · perf(hogvm): cut transformation execution ~35% in prod, ~2x on geoip",
+      "url": "https://github.com/PostHog/posthog/pull/74117",
+      "date": "2026-09-03T13:25:01Z",
+      "excerpt": "## Problem\n\nPostHog ingestion runs user-defined Hog transformations on every event, and the highest-volume one is the geoip template. On the Rust HogVM (the executor behind `CDP_HOG_RUST_VM_EXECUTION_ENABLED`) it ran meaningfully slower than the legacy native-JS plugin it replaces. Profiling showed the cost was the interpreter's per-step allocation churn, not the mmdb lookup. This PR is a series of allocation- and dispatch-focused optimizations to the VM crate and its napi addon.\n\n## Changes\n\nSix independent optimizations, each measured in isolation on a canonical geoip harness (interleaved A/B, kept only when it beat a 2% gate). They compound to roughly a 2x speedup on the geoip workload.\n\n| Change | What it does |\n| --- | --- |\n| Box large `HogLiteral` variants | Boxes the `Object` / `Callable` / `Closure` payloads so `HogValue` shrinks from 120 to 32 bytes. Every stack push/pop/clone and heap emplacement moves a quarter of the bytes it used to. |\n| `HogStr` string payload | Gives `HogLiteral::String` a two-arm payload: `Owned(String)` for computed strings, `Shared(Arc<str>)` for constants sliced out of the pre-decoded token stream. String-constant pushes become a refcount bump instead of a malloc+copy. Equality is content-based across arms. |\n| ahash object maps | Hashes object maps with `ahash` instead of SipHash. Still a keyed, DoS-resistant hash (object keys come from user programs), several times faster on the short keys the property-write loop hammers. |\n| In-place object emplacement | `walk_emplacing` rebuilt every native-function object result via `collect` (fresh"
+    },
+    {
+      "id": "pr-95610",
+      "type": "pr",
+      "title": "#95610 · perf(cohorts): decode bytecode once",
+      "url": "https://github.com/PostHog/posthog/pull/95610",
+      "date": "2026-09-09T21:04:14Z",
+      "excerpt": "## Problem\r\n\r\nThe cohort processor and the backfill seeder decode the same condition bytecode again on every single evaluation.\r\n\r\n- #74117 made `hogvm::Program::from_shared` decode the whole token array, and `CohortEvaluator` called it once per (event, condition) pair.\r\n- One event with several hundred person conditions pays several hundred full decodes.\r\n- A `person.properties.X IN (...)` leaf allocates one `Arc<str>` per string literal, per evaluation. Real catalogs hold lists of thousands of elements.\r\n\r\n## Changes\r\n\r\n- Evaluating a condition no longer decodes it. One 8000 element string `IN` evaluation drops 324 microseconds. See the benchmark below.\r\n- `cohort_core::ConditionProgram` holds a header validated, token decoded `hogvm::Program`. The catalog builds one per condition hash, so swapping programs costs two refcount bumps.\r\n- A leaf whose bytecode the HogVM cannot load is now dropped at catalog build, which excludes its cohort. It used to stay in the catalog and evaluate false on every event.\r\n- `filter_catalog_build_duration_seconds` reports the catalog build, which now carries the decode.\r\n- The Python parity screen mirrors the new drop, so `compare_cohort_membership` does not report a false divergence.\r\n- Everything else is mechanical. Field and map renames from `bytecode` to `program` across the catalog, the processor, and the seeder.\r\n\r\n> [!WARNING]\r\n> A cohort with an unloadable leaf stops emitting realtime membership. A person seed run whose pinned conditions are all unloadable now fails instead of seeding nothing. A production check on 2026-09-04 found n"
+    },
+    {
+      "id": "review-3924053972",
+      "type": "review",
+      "title": "pl · material review on #74117",
+      "url": "https://github.com/PostHog/posthog/pull/74117#discussion_r3924053972",
+      "date": "2026-09-03T11:31:17Z",
+      "excerpt": "nit: `set_chunk` is now load-bearing for instruction fetching (the cached slice is what `next_token` indexes), but only two of its five call sites are exercised. `calling_hog_stl.hog` and `icontains.hog` cover call into a Hog-written STL fn and return. The catch-frame switch (`set_chunk(frame.catch_symbol)` in the `Throw` arm) and the resume switch (`set_chunk(chunk_to_symbol(&active.chunk))`) are reached by nothing in this crate, and neither cymbal nor cohort-core tests ever call a Hog-written STL function.\n\nTwo tests would close that:\n\n1. A parity fixture that throws inside a lambda invoked by `arrayMap`, catches in the root program, and then calls a root function so a wrong chunk after unwind fails loudly:\n\n```\nlet caught := false;\ntry {\n  arrayMap(x -> throw Error('boom'), [1, 2]);\n} catch (e) {\n  caught := e.message = 'boom';\n}\nfun after() { return true; }\nreturn caught and after();\n```\n\n2. A test in `tests/async_resume.rs` (via `run_injecting`) that suspends from inside an STL frame, so the snapshot carries a non-root chunk on the call stack:\n\n```\nreturn arrayMap(x -> asyncFetch(x) + 1, [1, 2])\n```\n\nEvery resume test today snapshots with only root frames.\n\n_— written by Claude, posted on Paweł's behalf_"
+    },
+    {
+      "id": "review-3924658444",
+      "type": "review",
+      "title": "jose-sequeira · implementation response",
+      "url": "https://github.com/PostHog/posthog/pull/74117#discussion_r3924658444",
+      "date": "2026-09-03T12:46:11Z",
+      "excerpt": "Added both in 35278e08f8f: a chunk_switch_unwind test program that throws from a lambda under an stl/arrayMap frame and catches in root (throw is a statement in Hog, so the lambda calls a small boom() fn), and stl_frame_suspend_round_trips in async_resume.rs, which suspends inside the lambda while the stl/arrayMap frame is on the call stack, so the snapshot round-trips a non-root chunk and the resume returns into module code."
+    },
+    {
+      "id": "code-74117-31df22ecf08e2abe540a530517861e27c37fc8f6",
+      "type": "code",
+      "title": "rust/common/hogvm/tests/static/test_programs/chunk_switch_unwind.hog",
+      "url": "https://github.com/PostHog/posthog/blob/35278e08f8faf39f168abcd3a83fb66e1bbfef9c/rust%2Fcommon%2Fhogvm%2Ftests%2Fstatic%2Ftest_programs%2Fchunk_switch_unwind.hog",
+      "date": "2026-09-03T13:25:01Z",
+      "excerpt": "@@ -0,0 +1,13 @@\n+fun boom(x) {\n+  throw Error('boom');\n+}\n+\n+let caught := false;\n+try {\n+  arrayMap(x -> boom(x), [1, 2]);\n+} catch (e) {\n+  caught := e.message == 'boom';\n+}\n+\n+fun after() { return true; }\n+return caught and after();"
+    },
+    {
+      "id": "code-95610-373a575cd693cc021dd719291863b6fb4651a737",
+      "type": "code",
+      "title": "products/cohorts/backend/parity/test/fixtures/eligibility_golden.json",
+      "url": "https://github.com/PostHog/posthog/blob/19a08bb4a69dedecbff8a64f5678e0bc41454481/products%2Fcohorts%2Fbackend%2Fparity%2Ftest%2Ffixtures%2Feligibility_golden.json",
+      "date": "2026-09-09T21:04:14Z",
+      "excerpt": "@@ -86,6 +86,47 @@\n       \"filters\": {\"properties\": {\"type\": \"AND\", \"values\": [{\"type\": \"behavioral\", \"value\": \"performed_event\", \"key\": \"$pageview\", \"time_value\": 7, \"time_interval\": \"day\", \"conditionHash\": \"0123456789abcdef\", \"bytecode\": \"not-an-array\"}]}},\n       \"expected\": \"excluded_has_dropped_leaf\"\n     },\n+    {\n+      \"name\": \"empty_bytecode_is_dropped_as_malformed\",\n+      \"filters\": {\"properties\": {\"type\": \"AND\", \"values\": [{\"type\": \"behavioral\", \"value\": \"performed_event\", \"key\": \"$pageview\", \"time_value\": 7, \"time_interval\": \"day\", \"conditionHash\": \"0123456789abcdef\", \"bytecode\": []}]}},\n+      \"expected\": \"excluded_has_dropped_leaf\"\n+    },\n+    {\n+      \"name\": \"wrong_bytecode_marker_is_dropped_as_malformed\",\n+      \"filters\": {\"properties\": {\"type\": \"AND\", \"values\": [{\"type\": \"behavioral\", \"value\": \"performed_event\", \"key\": \"$pageview\", \"time_value\": 7, \"time_interval\": \"day\", \"conditionHash\": \"0123456789abcdef\", \"bytecode\": [\"_X\", 1, 29]}]}},\n+      \"expected\": \"excluded_has_dropped_leaf\"\n+    },\n+    {\n+      \"name\": \"non_integer_bytecode_version_is_dropped_as_malformed\",\n+      \"filters\": {\"properties\": {\"type\": \"AND\", \"values\": [{\"type\": \"behavioral\", \"value\": \"performed_event\", \"key\": \"$pageview\", \"time_value\": 7, \"time_interval\": \"day\", \"conditionHash\": \"0123456789abcdef\", \"bytecode\": [\"_H\", \"one\", 29]}]}},\n+      \"expected\": \"excluded_has_dropped_leaf\"\n+    },\n+    {\n+      \"name\": \"max_u64_bytecode_version_is_kept\",\n+      \"filters\": {\"properties\": {\"type\": \"AND\", \"values\": [{\"type\": \"behavioral\", \"value\": \"performed_event\", \"key\": \"$pageview\", \"time_value\": 7, \"time_interval\": \"day\", \"conditionHash\": \"0123456789abcdef\", \"bytecode\": [\"_H\", 18446744073709551615, 29]}]}},\n+      \"expected\": \"single_leaf\",\n+      \"expected_window_days\": 7\n+    },\n+ "
+    },
+    {
+      "id": "pr-78648",
+      "type": "pr",
+      "title": "#78648 · feat(autoresearch): cut accounts list query latency by ~70%",
+      "url": "https://github.com/PostHog/posthog/pull/78648",
+      "date": "2026-08-07T10:50:17Z",
+      "excerpt": "## Problem\r\n\r\n- The Customer analytics accounts list took ~2 seconds to load once a team had 10k accounts with custom property and warehouse columns.\r\n- Nearly all of that time went to federated Postgres reads: ClickHouse COPY'd whole tables out of Postgres because team filters never reached the `postgresql()` calls.\r\n\r\nPart of https://github.com/PostHog/posthog/issues/78880\r\n## Changes\r\n\r\nBenchmark medians (real HTTP request, 10 runs per scenario, result hashes byte-identical to the pre-change baseline at every step):\r\n\r\n| Scenario | 10k before | 10k after | 100k before | 100k after |\r\n|---|---|---|---|---|\r\n| Default fields | 300 ms | 195 ms | 387 ms | 319 ms |\r\n| +5 custom properties | 842 ms | 241 ms | 1068 ms | 865 ms |\r\n| +5 warehouse cols +2 props | 876 ms | 257 ms | 1486 ms | 1254 ms |\r\n\r\nAt 100k the floor is the largest single federated scan, so the relative win shrinks (remaining levers: [#78880](https://github.com/PostHog/posthog/issues/78880)).\r\n\r\n- The custom property federated tables now declare their real `team_id` column, so the standard team guard replaces an `account_id IN (SELECT ...)` predicate that ClickHouse could not push into Postgres. This cut the largest read from 783k rows to 71k. (`facade/hogql.py`)\r\n- The ClickHouse printer wraps predicate-free `PostgresTable` reads in `(SELECT * FROM postgresql(...) WHERE team_id = N)`. ClickHouse does not push the outer team guard through joins, so the filter is repeated where it does get pushed. Tables with their own predicates are skipped: wrapping them orphaned those predicates and regressed. (`printer/clic"
+    },
+    {
+      "id": "code-78648-92c52d5e483104cd2b29acbc1b56989573572f46",
+      "type": "code",
+      "title": "posthog/hogql/transforms/test/test_federated_join_merge.py",
+      "url": "https://github.com/PostHog/posthog/blob/1c3835de4cf1de4dbe7c55ee05d64cdb9482d667/posthog%2Fhogql%2Ftransforms%2Ftest%2Ftest_federated_join_merge.py",
+      "date": "2026-08-07T10:50:17Z",
+      "excerpt": "@@ -0,0 +1,136 @@\n+from posthog.test.base import BaseTest\n+\n+from parameterized import parameterized\n+\n+from posthog.schema import HogQLQueryModifiers\n+\n+from posthog.hogql.context import HogQLContext\n+from posthog.hogql.parser import parse_select\n+from posthog.hogql.printer import prepare_and_print_ast\n+from posthog.hogql.transforms.federated_join_merge import MERGED_ALIAS\n+\n+from products.data_tools.backend.models.join import DataWarehouseJoin\n+from products.warehouse_sources.backend.facade.models import DataWarehouseCredential, DataWarehouseTable\n+\n+ACCOUNTS_LAZY_JOINS_QUERY = \"\"\"\n+    select id, accounts.tags.names as tag_names, accounts.notebooks.count as notebook_count\n+    from system.accounts as accounts\n+\"\"\"\n+\n+EXPLICIT_JOINS_QUERY_TEMPLATE = \"\"\"\n+    select accounts.id, tag_agg.tag_count, note_agg.note_col\n+    from system.accounts as accounts\n+    left join (\n+        select account_id as account_id, count() as tag_count\n+        from system._account_tagged_items\n+        group by account_id\n+    ) as tag_agg on tag_agg.account_id = accounts.id\n+    left join (\n+        select account_id as account_id, {note_expr} as note_col\n+        from system._account_resource_notebooks\n+        group by account_id\n+    ) as note_agg on note_agg.account_id = accounts.id\n+\"\"\"\n+\n+\n+class TestFederatedJoinMerge(BaseTest):\n+    def _print_select(self, select: str, merge_enabled: bool = True) -> str:\n+        printed, _ = prepare_and_print_ast(\n+            parse_select(select),\n+            HogQLContext(\n+                team=self.team,\n+                user=self.user,\n+                enable_select_queries=True,\n+                modifiers=HogQLQueryModifiers(mergeFederatedAggregateJoins=merge_enabled),\n+            ),\n+            \"clickhouse\",\n+        )\n+        return pri"
+    },
+    {
+      "id": "pr-72688",
+      "type": "pr",
+      "title": "#72688 · refactor(conversations): extract support bot channel listing behind a facade",
+      "url": "https://github.com/PostHog/posthog/pull/72688",
+      "date": "2026-07-22T12:34:37Z",
+      "excerpt": "## Problem\r\n\r\n\r\n\r\n\r\n\r\n\r\nCustomer analytics announcements ([#70366](https://github.com/PostHog/posthog/pull/70366)) needs to list the SupportHog bot's Slack channels, but conversations has no facade — the only way in was importing its internals, which `tach` and import-linter reject.\r\n \r\nPart of https://github.com/PostHog/posthog/issues/73916\r\n## Changes\r\n\r\n- Extract the `conversations_list` pagination from `SlackChannelsView` into a shared `support_slack_channels` helper (response contract unchanged)\r\n- Add a minimal conversations facade: `facade/api.py` with `list_support_bot_channels(team_id)` returning frozen `SupportChannel` contracts\r\n- Move the `SupportSlackNotConfigured` / `SupportSlackChannelsUnavailable` exception definitions into `facade/contracts.py`; slack_sdk errors are translated at the boundary\r\n- No isolation change for conversations: no tach interface, no contract-check — just a compliant import target for other products\r\n\r\n\r\n\r\n\r\n\r\n\r\n## How did you test this code?\r\n\r\n`test_slack_endpoints.py` (24 cases) passes — pins the existing `/slack/channels` contract across the extraction.\r\n\r\n\r\n\r\n\r\n\r\n\r\n👉 _Stay up-to-date with [PostHog coding conventions](https://posthog.com/docs/contribute/coding-conventions) for a smoother review._\r\n\r\n## Automatic notifications\r\n\r\n- [ ] Publish to changelog?\r\n- [ ] Alert Sales and Marketing teams?\r\n\r\n## Docs update\r\n\r\nNo"
+    },
+    {
+      "id": "pr-70358",
+      "type": "pr",
+      "title": "#70358 · feat(customer-analytics): add announcement data model",
+      "url": "https://github.com/PostHog/posthog/pull/70358",
+      "date": "2026-07-22T14:11:48Z",
+      "excerpt": "## Problem\r\n\r\nCustomer analytics is where CSMs manage their accounts, and many accounts have a dedicated Slack channel the SupportHog bot already lives in. There's no way today for a CSM to push an outbound message to those channels (\"we're at an offsite this week, expect slower replies\", an incident notice) straight from customer analytics.\r\n\r\nThis is the first PR in a stack that adds an **Announcements** feature to customer analytics. It ports the data model and delivery concepts from the earlier support-Broadcasts prototype ([#63942](https://github.com/PostHog/posthog/pull/63942), closed unmerged), relocated into customer analytics because this is fundamentally a CRM capability, and renamed from \"Broadcasts\" (which collides with competitor terminology).\r\n\r\nThis PR is **data model only**. The API, async send task, and frontend land in follow-ups behind a `customer-analytics-announcements` flag.\r\n\r\nPart of https://github.com/PostHog/posthog/issues/73916\r\n## Changes\r\n\r\nTwo new team-scoped models in `products/customer_analytics/backend/models/`:\r\n\r\n- `Announcement` — one message plus a rollup status (`pending` / `sending` / `sent` / `partially_failed` / `failed`) and denormalized `sent_count` / `failed_count` / `total_channels` so the history list renders without per-row aggregation.\r\n- `AnnouncementDelivery` — one row per target Slack channel, each with its own `pending` / `sent` / `failed` status and Slack error/message-ts.\r\n\r\nBoth inherit `TeamScopedRootMixin` (fail-closed `objects`) with an `all_teams` unscoped sibling and `default_manager_name = \"all_teams\"` for Django "
+    },
+    {
+      "id": "pr-70366",
+      "type": "pr",
+      "title": "#70366 · feat(customer-analytics): add announcements API with channel validation",
+      "url": "https://github.com/PostHog/posthog/pull/70366",
+      "date": "2026-07-22T19:48:24Z",
+      "excerpt": "> [!NOTE]\r\n> Stacked on [#72688](https://github.com/PostHog/posthog/pull/72688) (conversations facade) → [#70358](https://github.com/PostHog/posthog/pull/70358) (data model). Review those first — this PR's diff is just the customer analytics API layer.\r\n\r\n## Problem\r\n\r\nWith the `Announcement` / `AnnouncementDelivery` models in place ([#70358](https://github.com/PostHog/posthog/pull/70358)), customer analytics needs an API to compose an announcement and pick the customer Slack channels to send it to. Two things have to be right from day one: the picker has to be useful to a CSM (channels identified by *customer*, not raw Slack names), and the create path has to be safe (a caller must not be able to make the SupportHog bot post wherever they like).\r\n\r\nPart of https://github.com/PostHog/posthog/issues/73916\r\n## Changes\r\n\r\n**`AnnouncementViewSet`** (`list` / `create` / `retrieve`) under `/api/projects/:id/announcements/`, plus a **`channels` action** that powers the composer picker.\r\n\r\n- **Customer-labeled picker.** `channels` lists the SupportHog bot's member channels and joins each against customer analytics accounts by `Account.properties.slack_channel_id`. Channels mapped to a customer sort first, labeled by account name; unmapped channels (internal channels, customers not yet in Accounts) fall below with a null `customer_name` and their raw Slack name. This reuses the `slack_channel_id` link that already exists on accounts rather than inventing a new mapping.\r\n- **Server-side channel validation (the pentest fix).** `create` resolves the bot's member channels server-side (v"
+    },
+    {
+      "id": "pr-70370",
+      "type": "pr",
+      "title": "#70370 · feat(customer-analytics): add async send_announcement task",
+      "url": "https://github.com/PostHog/posthog/pull/70370",
+      "date": "2026-07-22T20:26:55Z",
+      "excerpt": "> [!NOTE]\r\n> Third in the stack. Base is [#70366](https://github.com/PostHog/posthog/pull/70366) (API), which is stacked on [#70358](https://github.com/PostHog/posthog/pull/70358) (model). Review those first.\r\n\r\n## Problem\r\n\r\nThe announcements API ([#70366](https://github.com/PostHog/posthog/pull/70366)) persists an announcement and its per-channel delivery rows as `pending`, but nothing sends them yet. This PR adds the async delivery.\r\n\r\nPart of https://github.com/PostHog/posthog/issues/73916\r\n## Changes\r\n\r\n**`send_announcement`** Celery task (`customer_analytics.send_announcement`), dispatched from the viewset's `perform_create` via `transaction.on_commit` so it only fires once the delivery rows are committed, never from inside the create's atomic block.\r\n\r\nThe task posts the message to each channel through the SupportHog bot and records the outcome on each delivery row. Design properties:\r\n\r\n- **Per-channel isolation.** A Slack failure on one channel is caught, recorded on that row (with the Slack error code), and the batch continues. One bad channel never aborts the send.\r\n- **Idempotent.** Only `pending` rows are processed, so a retry or a duplicate dispatch never re-posts to a channel that already received the message. The `(announcement, slack_channel_id)` unique constraint from the model PR backs this.\r\n- **Status rollup.** Aggregate counts and status roll up to `sent` / `partially_failed` / `failed` once all rows resolve.\r\n- **Bot identity.** Reuses the SupportHog display name and icon from the team's conversations settings, so announcements look like the support b"
+    },
+    {
+      "id": "pr-70377",
+      "type": "pr",
+      "title": "#70377 · feat(customer-analytics): add announcements tab",
+      "url": "https://github.com/PostHog/posthog/pull/70377",
+      "date": "2026-07-23T13:43:19Z",
+      "excerpt": "> [!NOTE]\r\n> Fourth in the stack, on top of [#70370](https://github.com/PostHog/posthog/pull/70370) → [#70366](https://github.com/PostHog/posthog/pull/70366) → [#70358](https://github.com/PostHog/posthog/pull/70358). Review those first.\r\n\r\n## Problem\r\n\r\nThe backend can compose, validate, persist, and deliver announcements. This PR gives CSMs the UI to actually do it, in customer analytics, behind the `customer-analytics-announcements` flag.\r\n\r\nPart of https://github.com/PostHog/posthog/issues/73916\r\n## Changes\r\n\r\nA new **Announcements** tab in the customer analytics scene:\r\n\r\n- **Composer** — a plain-text message box plus a channel multi-select. Each option is labeled by the **customer account** the channel belongs to (`Acme (#acme-shared)`), so a CSM picks by account, not by raw Slack channel name. Mapped channels sort first; unmapped ones fall back to `#channel`. The list comes from the `announcements/channels` endpoint.\r\n- **Double-submit guarded send** — the button drives `loading` + `disabledReason`, and the kea listener also bails if a send is already in flight, so a created announcement can't be double-posted from a double-click.\r\n- **History table** — past announcements with status, delivered/total counts, and an expandable row showing per-channel delivery detail (channel, status, Slack error).\r\n- **Connect banner** — when the SupportHog bot isn't connected, the tab shows a banner linking to Support settings instead of a dead composer.\r\n\r\nAll data flows through the generated API client and types (`announcementsList` / `announcementsCreate` / `announcementsChannelsLi"
+    },
+    {
+      "id": "code-72688-5562f20dbb472218e150aa6a294a86c1c9ee8a12",
+      "type": "code",
+      "title": "products/conversations/backend/facade/api.py",
+      "url": "https://github.com/PostHog/posthog/blob/381d2a80fd62a470ca3ce027b55b67ac7fbb20db/products%2Fconversations%2Fbackend%2Ffacade%2Fapi.py",
+      "date": "2026-07-22T12:34:37Z",
+      "excerpt": "@@ -0,0 +1,105 @@\n+\"\"\"\n+Facade API for conversations.\n+\n+The only conversations surface other products may import. Wraps the SupportHog\n+Slack integration behind contract types so callers never touch slack_sdk or the\n+team's Slack credentials directly.\n+\"\"\"\n+\n+from typing import Any\n+\n+from pydantic.dataclasses import dataclass\n+from slack_sdk.errors import SlackApiError\n+\n+from posthog.models.team import Team\n+\n+from products.conversations.backend.slack import get_slack_client\n+from products.conversations.backend.support_slack_channels import (\n+    SupportSlackChannelsUnavailable as SupportSlackChannelsUnavailable,\n+    SupportSlackNotConfigured as SupportSlackNotConfigured,\n+    list_support_bot_channels as _list_support_bot_channels,\n+)\n+\n+\n+class SupportMessageSendError(Exception):\n+    \"\"\"Slack rejected a SupportHog bot message.\n+\n+    ``code`` is the Slack error code (e.g. ``not_in_channel``); ``retry_after`` carries\n+    the requested wait in seconds when Slack rate-limited the post, else None.\n+    \"\"\"\n+\n+    def __init__(self, code: str, retry_after: float | None = None) -> None:\n+        super().__init__(code)\n+        self.code = code\n+        self.retry_after = retry_after\n+\n+\n+@dataclass(frozen=True)\n+class SupportChannel:\n+    \"\"\"A Slack channel visible to the SupportHog bot.\"\"\"\n+\n+    id: str\n+    name: str\n+    is_member: bool\n+\n+\n+def list_support_bot_channels(team_id: int, *, members_only: bool = False) -> list[SupportChannel]:\n+    \"\"\"Slack channels the SupportHog bot can see for this team, sorted by name.\n+\n+    With ``members_only=True``, only channels the bot belongs to (the ones it can\n+    post to). Raises :class:`SupportSlackNotConfigured` when the bot isn't connected\n+    and :class:`SupportSlackChannelsUnavailable` when the list can't be reso"
+    },
+    {
+      "id": "pr-87301",
+      "type": "pr",
+      "title": "#87301 · feat(customer-analytics): add account track rules",
+      "url": "https://github.com/PostHog/posthog/pull/87301",
+      "date": "2026-08-24T17:28:03Z",
+      "excerpt": "## Problem\n\nProject admins cannot define which active accounts stay visible in Customer Analytics as account data changes.\n\nOne-off `ignored_at` updates become stale. Admins need reusable rules, safe previews, controlled application, and run history.\n\nCloses #86654\n\n## Changes\n\n- Admins can build versioned rules with OR groups and AND conditions across account fields and typed custom properties.\n- Preview shows included and excluded samples, account identities, rule-property values, lifecycle totals, and change counts.\n- Save persists rule changes without updating accounts.\n- Enabling saved rules applies them immediately. Run now reapplies any saved, enabled rules without requiring a preview.\n- Temporal evaluates active accounts in keyset batches, preserves unchanged timestamps, skips churned accounts, and records each run.\n- Preview and execution share one Postgres filter compiler, so the displayed outcome matches the applied outcome.\n- Admin-only write APIs use optimistic versions, rate limits, feature-flag gating, activity logs, structured logs, and error capture.\n- The `customer-analytics-track-rules` feature flag starts at 0%.\n\n### Before\n\n\n\n\n\n### After\n\n\n\n\n\n## How did you test this code?\n\n- Backend tests cover validation, permissions, draft previews, OR groups, run creation, batch updates, stale runs, and lifecycle handling.\n- Frontend tests cover filter translation, draft state, enable-and-run behavior, preview columns, and run eligibility.\n- Full mypy, frontend TypeScript, Kea typegen, Ruff, migration checks, and strict preflight pass on current `master`.\n- OpenAPI "
+    },
+    {
+      "id": "issue-86654",
+      "type": "issue",
+      "title": "#86654 · Configure, preview, and manually apply account Track Rules",
+      "url": "https://github.com/PostHog/posthog/issues/86654",
+      "date": "2026-08-20T15:47:51Z",
+      "excerpt": "## Parent\n\n- Parent: Customer Analytics Track Rules\n- Delivery order: 2 of 4\n- Implementation: PR #87301\n\n## Parent user story\n\n> As a project admin, I can define and apply account Track Rules, so that Customer Analytics shows the accounts my team manages.\n\n## Outcome\n\nA project admin can preview an unsaved include rule, save it, and enable it. Enabling starts the first run automatically. The admin can later run any saved enabled configuration on demand. PostHog updates active accounts in bounded Temporal batches and records each run.\n\n## Starting state\n\nPR #85913 provides `Account.ignored_at`, default filtering, explicit include escape hatches, direct ignored-account reads, and read-only API and HogQL exposure.\n\nIssue #86652 and PR #86828 provide a typed native account-field filter catalog and Postgres predicates. Existing account custom property filters provide definition validation and typed value coercion.\n\nCustomer Analytics has no Track Rules config field, schema, endpoints, evaluator, workflow, run model, or settings UI.\n\n## Scope\n\n### Configuration\n\n- Add an admin-protected `account_track_rules` JSON field to `TeamCustomerAnalyticsConfig`.\n- Keep the field out of common Team and Project response payloads.\n- Add dedicated read and update endpoints.\n- Store schema version, config version, enabled state, and rule groups in the JSON.\n- Lock the team config row and compare the expected version before update.\n- Increment the version after every valid config change.\n- Record config changes in the activity log.\n\nVersion 1 shape:\n\n\n\n### Rules\n\n- Support include mode only.\n- "
+    },
+    {
+      "id": "code-87301-4e856e97a9698769b7940006e38514dad06341b6",
+      "type": "code",
+      "title": "products/customer_analytics/backend/test/test_account_track_rules.py",
+      "url": "https://github.com/PostHog/posthog/blob/05fd9f09ef976635f945582d6b9c18757ffce7d6/products%2Fcustomer_analytics%2Fbackend%2Ftest%2Ftest_account_track_rules.py",
+      "date": "2026-08-24T17:28:03Z",
+      "excerpt": "@@ -0,0 +1,727 @@\n+import json\n+import asyncio\n+from dataclasses import asdict\n+from datetime import UTC, datetime\n+from uuid import uuid4\n+\n+import pytest\n+from freezegun import freeze_time\n+from posthog.test.base import APIBaseTest, BaseTest\n+from unittest.mock import AsyncMock, patch\n+\n+from rest_framework import status\n+from temporalio import activity\n+from temporalio.exceptions import WorkflowAlreadyStartedError\n+from temporalio.testing import WorkflowEnvironment\n+from temporalio.worker import UnsandboxedWorkflowRunner, Worker\n+\n+from posthog.models import OrganizationMembership, Team\n+from posthog.models.activity_logging.activity_log import ActivityLog\n+from posthog.models.personal_api_key import PersonalAPIKey\n+from posthog.models.utils import generate_random_token_personal, hash_key_value\n+\n+from products.customer_analytics.backend.logic.account_track_rules import (\n+    AccountTrackRuleValidationError,\n+    create_account_track_rule_run,\n+    get_account_track_rules,\n+    preview_account_track_rules,\n+    process_next_account_track_rule_batch,\n+)\n+from products.customer_analytics.backend.models import (\n+    AccountTrackRuleRun,\n+    AccountTrackRuleRunStatus,\n+    CustomPropertyValue,\n+    DisplayType,\n+    TargetType,\n+    TeamCustomerAnalyticsConfig,\n+)\n+from products.customer_analytics.backend.temporal.account_track_rules import (\n+    ACCOUNT_TRACK_RULE_WORKFLOW_NAME,\n+    AccountTrackRuleEvaluationInput,\n+    AccountTrackRuleEvaluationOutput,\n+    AccountTrackRuleEvaluationWorkflow,\n+    account_track_rule_fail_run_activity,\n+    account_track_rule_workflow_id,\n+)\n+from products.customer_analytics.backend.test.factories import create_account, create_custom_property_definition\n+\n+\n+@pytest.mark.asyncio\n+async def test_workflow_processes_batches_until_the_r"
+    },
+    {
+      "id": "pr-94104",
+      "type": "pr",
+      "title": "#94104 · feat(notebooks): add reusable widget catalog",
+      "url": "https://github.com/PostHog/posthog/pull/94104",
+      "date": "2026-09-15T14:56:41Z",
+      "excerpt": "## Problem\n\nNotebook users cannot reuse a generated widget across notebooks or propagate reviewed improvements between placements.\n\nGenerated widgets remain notebook-local and lack portable contracts, saved demos, shared versions, or discovery tools.\n\n## Changes\n\n\n\n\n\n\n\n\n- Notebook users can publish generated widgets with **Make reusable** into a searchable project catalog with editable demo data.\n- Shared updates create runnable drafts without changing the published version.\n- Fork publication and placement replacement commit together; attachment requests use timeout and unmount cancellation.\n- Reusable widget facade calls take team, notebook, and user IDs instead of passing notebook models.\n- Clean reviews run immediately for widgets without dataframe inputs; dataframe access requires consent for the exact build.\n- A version dropdown switches the preview, source, input contract, and demo data together.\n- **Demo data** opens saved rows in a table, with a JSON editor for the latest version and its draft.\n- Saving demo rows refreshes the preview without changing notebook data or creating a source version.\n- Historical demo data remains read-only; unsaved edits require confirmation before discarding.\n- **Make latest** restores an older version as a new version while preserving history and notebook pins.\n- The catalog shows each draft preview, input contract, security review, and source before publication.\n- Wide detail pages place the controls beside a resizable preview; narrow pages stack them.\n- The update form lets users choose the generation model for Improve and Regenerat"
+    },
+    {
+      "id": "review-4007586553",
+      "type": "review",
+      "title": "sinan-ku · material review on #94104",
+      "url": "https://github.com/PostHog/posthog/pull/94104#discussion_r4007586553",
+      "date": "2026-09-14T17:03:16Z",
+      "excerpt": "**Demo data skips the source access check**\n\n`publish_reusable_widget` reads up to 20 rows per input with the publisher's run authorization, and stores them in `GeneratedWidgetVersion.demo_data`. This function returns those rows to any user who has notebook viewer and query viewer access.\n\nThe notebook frame endpoint also calls `_require_run_connection_access` (`views/notebook.py:721`). Its comment says: \"Notebook + query access does not imply source access.\" The demo path does not run that check, and it does not check object-level access to the source notebook. As a result, a user who cannot read a warehouse source, or a restricted notebook, can read those rows through the catalog. Restore and generation copy `demo_data` forward, so the rows stay after an edit.\n\nSuggestions:\n- Record the connection or source of each captured frame, and check it again here.\n- Or store only the schema, with synthetic demo rows.\n- At minimum, tell the publisher in the publish modal that sample rows become visible to the team."
+    },
+    {
+      "id": "review-4013910136",
+      "type": "review",
+      "title": "mariusandra · implementation response",
+      "url": "https://github.com/PostHog/posthog/pull/94104#discussion_r4013910136",
+      "date": "2026-09-15T09:06:58Z",
+      "excerpt": "Fixed in bdd271854cf using the schema-only approach: publishing creates empty contract-shaped demo frames and no longer reads or copies notebook rows, row counts, or source run IDs. Authors can explicitly enter invented sample rows; the publish modal explains catalog visibility. The backend tests cover empty demos and the schema-only fallback for older input contracts."
+    },
+    {
+      "id": "code-94104-54af5fce4aea38299186cea5863ed0142d30dfdd",
+      "type": "code",
+      "title": "products/notebooks/backend/test/test_reusable_widgets.py",
+      "url": "https://github.com/PostHog/posthog/blob/1edff109771f0969083d482d3b6158ddb2550432/products%2Fnotebooks%2Fbackend%2Ftest%2Ftest_reusable_widgets.py",
+      "date": "2026-09-15T14:56:41Z",
+      "excerpt": "@@ -0,0 +1,1310 @@\n+import json\n+from concurrent.futures import ThreadPoolExecutor\n+from threading import Barrier\n+from uuid import UUID, uuid4\n+\n+from posthog.test.base import APIBaseTest, NonAtomicBaseTest\n+from unittest.mock import Mock, patch\n+\n+from django.core.cache import cache\n+from django.db import close_old_connections, transaction\n+from django.db.models.signals import pre_save\n+from django.utils import timezone\n+\n+from parameterized import parameterized\n+from rest_framework.exceptions import PermissionDenied\n+\n+from posthog.constants import AvailableFeature\n+from posthog.models import OrganizationMembership, Team\n+from posthog.models.activity_logging.activity_log import ActivityLog\n+from posthog.models.personal_api_key import PersonalAPIKey\n+from posthog.models.utils import generate_random_token, hash_key_value\n+\n+from products.access_control.backend.models.access_control import AccessControl\n+from products.canvas.backend.notebook_integration import CanvasGenerationState, NotebookCanvasVersion\n+from products.notebooks.backend.models import (\n+    GeneratedWidget,\n+    GeneratedWidgetGenerationJob,\n+    GeneratedWidgetVersion,\n+    Notebook,\n+    NotebookNodeRun,\n+    NotebookWidgetInstance,\n+)\n+from products.notebooks.backend.reusable_widgets import (\n+    attach_reusable_widget,\n+    get_reusable_widget_status,\n+    list_reusable_widgets,\n+    read_reusable_widget_demo_frame,\n+    reusable_widget_catalog_context,\n+    start_reusable_widget_generation,\n+)\n+from products.notebooks.backend.widget_generation import (\n+    WIDGET_SECURITY_REVIEW_MODEL,\n+    GeneratedWidgetSource,\n+    WidgetSecurityReview,\n+)\n+from products.notebooks.backend.widgets import (\n+    WidgetConflictError,\n+    WidgetError,\n+    WidgetStatus,\n+    get_widget_status,\n+    list_widget_ve"
+    },
+    {
+      "id": "pr-68776",
+      "type": "pr",
+      "title": "#68776 · chore(product-analytics): speed up and consolidate insight chart test suites",
+      "url": "https://github.com/PostHog/posthog/pull/68776",
+      "date": "2026-07-06T22:10:23Z",
+      "excerpt": "## Problem\n\nThe harness-based insight chart test suites (`products/product_analytics/frontend/insights/`) were slow: the full run took ~18.4s wall, with `TrendsLineChart.test.tsx` alone at 17.5s for 55 tests. Profiling showed two causes:\n\n- `renderInsight` mounted the full filter editor UI (387 of 443 DOM nodes) for every test, while none of the 8 chart suites interact with it. That roughly doubled every test's runtime.\n- Many rendered tests re-proved behavior already covered at a cheaper level: quill-charts' own suite (legend mechanics, tooltip pin lifecycle, goal lines, value labels) plus the shared adapter unit tests (`goalLinesAdapter`, `compareDimming`, the click handlers). Some scenarios were tested at three levels at once, 2-6x across suites.\n\n## Changes\n\n- `renderInsight` now renders chart-only by default. `renderInsightPage` (previously a plain alias) opts back into the full page and is used by the one suite that tests the filter controls (`TaxonomicBreakdownFilter.test.tsx`, no changes needed there).\n- Converted the harness's three `findByRole('img', { name })` calls to `findByLabelText`. The now-blocking `jest-no-byrole-name-queries` semgrep rule only scans `*.test.*` files, so these helper-file instances were invisible to the backlog sweep in #68740.\n- Removed ~42 full-mount tests whose regressions are caught by surviving wiring tests, transforms tests, or quill-charts' own suite, and merged near-duplicate mounts into `it.each` cases. Kept one rendered wiring test per chart-specific feature (tooltip content, persons modal clicks, breakdown construction, empty st"
+    },
+    {
+      "id": "code-68776-2e2dd25ae69e1a2105caf39e572a070840540b65",
+      "type": "code",
+      "title": "frontend/src/test/insight-testing/render-insight.tsx",
+      "url": "https://github.com/PostHog/posthog/blob/a1d91980408829cd55605ec94d408631db4523c7/frontend%2Fsrc%2Ftest%2Finsight-testing%2Frender-insight.tsx",
+      "date": "2026-07-06T22:10:23Z",
+      "excerpt": "@@ -134,10 +134,18 @@ export function renderInsight(props: RenderInsightProps = {}): ReturnType<typeof\n     return render(\n         <InsightWrapper\n             query={props.query ?? buildTrendsQuery()}\n-            showFilters={props.showFilters ?? true}\n+            showFilters={props.showFilters ?? false}\n             context={props.context}\n             inSharedMode={props.inSharedMode}\n             embedded={props.embedded}\n         />\n     )\n }\n+\n+/** Render the full insight page including the filter editor UI (header, series\n+ *  editor, breakdown, display config). Mounting all of that roughly doubles a\n+ *  test's runtime versus the chart-only `renderInsight`, so reach for this only\n+ *  when the test interacts with the filter controls themselves. */\n+export function renderInsightPage(props: RenderInsightProps = {}): ReturnType<typeof render> {\n+    return renderInsight({ ...props, showFilters: props.showFilters ?? true })\n+}"
+    },
+    {
+      "id": "pr-100749",
+      "type": "pr",
+      "title": "#100749 · chore(insights): remove the legacy filters-to-query converter",
+      "url": "https://github.com/PostHog/posthog/pull/100749",
+      "date": "2026-09-18T11:34:05Z",
+      "excerpt": "## Problem\n\nNobody converts legacy `filters` into a query in the browser any more, but the converter that did it still sits in the file every insight series helper lives in.\n\n- `filtersToQueryNode` has no callers outside its own tests. `getQueryFromInsightLike` is gone, and `getQueryBasedInsightModel` now strips `filters` and passes `query` through.\n- The module name promises conversion, so 17 files import their series helpers from a file named after a function they do not use.\n- Part of the legacy insight removal, https://github.com/PostHog/posthog/issues/77396.\n\n## Changes\n\nNothing a person sees changes. The whole diff is internal.\n\n- Delete `filtersToQueryNode` and the code only it reached: `filtersToFunnelPathsQuery`, `hiddenLegendKeysToIndexes`, `hiddenLegendKeysToBreakdowns`, the eight per-type filter builders, and the tracking-context type.\n- Rename `filtersToQueryNode.ts` to `actionsAndEventsToSeries.ts`, after the export that 13 of its 17 importers use.\n- Keep the other live exports where they are: `actionsAndEventsToSeries`, `legacyEntityToNode`, `sanitizeRetentionEntity`, `expandGroupNodes`, `actorsOnlyMathTypes`, `FilterTypeActionsAndEvents`.\n- Delete two helpers elsewhere that lose their last caller with the converter: `transformLegacyHiddenLegendKeys` in `funnelUtils.tsx`, and `cleanGlobalProperties` in `cleanProperties.ts` with the three property-group helpers only it reached.\n- Repointing the 17 import paths is mechanical.\n\nThe two deletions outside the renamed module are the only judgment call here. Both are unreachable after the converter goes, and shippin"
+    },
+    {
+      "id": "code-100749-58226454c33be5932d6915178a55f5523906aed2",
+      "type": "code",
+      "title": "frontend/src/queries/nodes/InsightQuery/utils/actionsAndEventsToSeries.test.ts",
+      "url": "https://github.com/PostHog/posthog/blob/b31ebd4843c0a0d86c374493f7f531346c1bb8d5/frontend%2Fsrc%2Fqueries%2Fnodes%2FInsightQuery%2Futils%2FactionsAndEventsToSeries.test.ts",
+      "date": "2026-09-18T11:34:05Z",
+      "excerpt": "@@ -0,0 +1,150 @@\n+import { MathAvailability } from 'scenes/insights/filters/ActionFilter/ActionFilterRow/types'\n+\n+import { NodeKind } from '~/queries/schema/schema-general'\n+import { ActionFilter, BaseMathType, FunnelDatawarehouseFilter, LifecycleDatawarehouseFilter } from '~/types'\n+\n+import { actionsAndEventsToSeries } from './actionsAndEventsToSeries'\n+\n+describe('actionsAndEventsToSeries', () => {\n+    it('sorts series by order', () => {\n+        const actions: ActionFilter[] = [{ type: 'actions', id: '1', order: 1, name: 'item2', math: 'total' }]\n+        const events: ActionFilter[] = [\n+            { id: '$pageview', type: 'events', order: 0, name: 'item1' },\n+            { id: '$autocapture', type: 'events', order: 2, name: 'item3' },\n+        ]\n+\n+        const result = actionsAndEventsToSeries({ actions, events }, false, MathAvailability.None)\n+\n+        expect(result[0].name).toEqual('item1')\n+        expect(result[1].name).toEqual('item2')\n+        expect(result[2].name).toEqual('item3')\n+    })\n+\n+    it('sorts elements without order first', () => {\n+        const actions: ActionFilter[] = [{ type: 'actions', id: '1', name: 'itemWithOrder', math: 'total' }]\n+        const events: ActionFilter[] = [\n+            { id: '$pageview', type: 'events', order: 0, name: 'item1' },\n+            { id: '$autocapture', type: 'events', order: 2, name: 'item2' },\n+        ]\n+\n+        const result = actionsAndEventsToSeries({ actions, events }, false, MathAvailability.None)\n+\n+        expect(result[0].name).toEqual('itemWithOrder')\n+        expect(result[1].name).toEqual('item1')\n+        expect(result[2].name).toEqual('item2')\n+    })\n+\n+    it('assumes typeless series is an event series', () => {\n+        const events: ActionFilter[] = [{ id: '$pageview', order: 0, na"
+    },
+    {
+      "id": "pr-110300",
+      "type": "pr",
+      "title": "#110300 · fix(signals): wait for full post-resolution metric windows",
+      "url": "https://github.com/PostHog/posthog/pull/110300",
+      "date": "2026-10-01T21:38:55Z",
+      "excerpt": "## Problem\n\nPeople resolving a Signals report can receive a metric verdict that includes data from before the fix. A short soak does not fill a longer query window.\n\n## Changes\n\n- Metric checks wait for a full post-resolution query window independently of the minimum soak.\n- Each run pins absolute query bounds to avoid cached relative measurements from before resolution.\n- Reopening resets the measurement anchor. Legacy active checks start at the next coordinator tick and recalculate expiry from their remaining schedule.\n- Expiry stays within 90 days of the anchor. Unreachable windows produce an inconclusive result instead of silently expiring.\n- Legacy rows do not distinguish custom expiries from defaults, so both follow the re-arming policy. Already anchored checks retain their deadlines.\n- New checks validate numeric goals and baselines using metric kinds, formats, units, and query axes. Existing configurations remain readable.\n- The nullable measurement anchor migration is additive. Agent checks keep their existing soak schedule.\n- Metric readers accept the format fields, but writers omit them until the foundation layer. No visual layout changes occur here.\n\nBefore:\n\n\n\nAfter:\n\n\n\n## How did you test this code?\n\n**Test rationale:** The existing legacy execution case now uses the normal 30-day expiry and advances to the deferred run, proving it records a verdict. Recurring variants cover expiry padding and the 90-day cap; unreachable-window cases cover legacy horizons and anchored deadlines. Existing execution and resolve cases now cover full-window scheduling and reset be"
+    },
+    {
+      "id": "pr-110308",
+      "type": "pr",
+      "title": "#110308 · feat(signals): add check approval and atomic metric replacement",
+      "url": "https://github.com/PostHog/posthog/pull/110308",
+      "date": "2026-10-02T11:55:48Z",
+      "excerpt": "## Problem\n\nPeople need to endorse a follow-up measurement or request a better one without stopping its scheduled work. This layer supplies the APIs for the consolidation UI.\n\n## Changes\n\n- Approval records a person's quality signal without changing the schedule. Retries preserve the first approval and advance no further timestamps.\n- Atomic replacement creates an unapproved metric check and keeps the original running when validation fails.\n- Replacement preserves the existing soak and remaining recurrence. Callers cannot override the soak.\n- Creation and replacement share timing validation. The full metric schedule must fit before the 90-day horizon, including the soak and query window.\n- Replacement rejects a check moved by a concurrent report merge before cancellation. The caller can reload and retry on the surviving report.\n- Query permissions apply to replacement measurements. Invalid numeric goals, units, and HogQL aggregation syntax fail during authoring.\n- The MCP tool requires `task:write` and `query:read`. The `signals-report-checks-replace` flag keeps it hidden until the API deploys everywhere.\n- Research preserves person-selected checks and skips check updates when their versions change during a run.\n- Open checks appear before terminal history. Existing impact-plan endpoints remain functional; this layer has no visual layout changes.\n\nThe approval migration adds nullable fields. Generated API and MCP files follow the serializer changes.\n\n> [!WARNING]\n> Merge and deploy [#110300](https://github.com/PostHog/posthog/pull/110300) fully, including workers, before sh"
+    },
+    {
+      "id": "pr-109433",
+      "type": "pr",
+      "title": "#109433 · feat(signals): consolidate impact goals into follow-up checks",
+      "url": "https://github.com/PostHog/posthog/pull/109433",
+      "date": "2026-10-03T03:01:17Z",
+      "excerpt": "## Problem\n\nPeople reviewing a Signals report see impact goals and follow-up checks as separate plans for judging the same outcome after a fix.\n\nThe impact plan needs a separate approval step but never runs. The check runs, but lacks the goal chart and metric suggestion flow.\n\n## Changes\n\nBuilds on [#110300](https://github.com/PostHog/posthog/pull/110300) and [#110308](https://github.com/PostHog/posthog/pull/110308). Those layers supply metric timing, validation, approval, and atomic replacement.\n\n- Expected impact keeps its existing measurement UI and reads metric follow-up checks for goals, baselines, charts, and queries.\n- The existing person-level `signals-expected-impact` display flag controls the Expected impact card and its actions.\n- The Follow-up checks sidebar keeps its existing layout for schedules and results across metric and investigative checks.\n- Pending metric rows show the minimum wait after resolution; active checks show their scheduled run date.\n- People can mark open measurements “Looks good” or ask AI to suggest better metrics from Expected impact. Approval does not affect execution.\n- Re-research keeps unchanged checks and their approval, replaces revised checks, and retires omitted checks. Already-terminal checks do not abort reconciliation.\n- A research pass skips and logs reconciliation if checks changed while it ran. A later informed pass can revise approved checks.\n- Metric suggestions stay disabled until the `signals-report-checks-replace` rollout flag enables the replacement tool.\n- Research traces, task summaries, and run details enforce analy"
+    },
+    {
+      "id": "code-110300-0ac913a3c78942eb234f17401bf651a92129b2f8",
+      "type": "code",
+      "title": "products/signals/backend/test/test_report_checks.py",
+      "url": "https://github.com/PostHog/posthog/blob/0defbeaab428488dcee60c01814583d5d8315190/products%2Fsignals%2Fbackend%2Ftest%2Ftest_report_checks.py",
+      "date": "2026-10-01T21:38:55Z",
+      "excerpt": "@@ -1,7 +1,8 @@\n import json\n import time\n-from datetime import timedelta\n+from datetime import UTC, datetime, timedelta\n \n+import time_machine\n from posthog.test.base import APIBaseTest\n from unittest.mock import AsyncMock, patch\n \n@@ -53,6 +54,7 @@\n     resolve_check_query,\n     run_due_report_checks,\n )\n+from products.signals.backend.report_check_timing import metric_check_ready_at, metric_check_window_start\n from products.signals.backend.report_checks import (\n     AWAITING_DATA_RETRY_WAITS,\n     DEFAULT_CHECK_EXPIRY_AFTER_LAST_RUN,\n@@ -74,6 +76,7 @@\n     CheckSpec,\n     MetricThresholdConfig,\n     parse_check_config,\n+    validate_metric_check_for_write,\n )\n from products.signals.backend.report_metric_refresh import MetricMeasurement\n from products.signals.backend.scout_harness.tools.checks import (\n@@ -191,6 +194,142 @@ def test_unknown_kind_is_refused(self) -> None:\n         with self.assertRaises(CheckConfigValidationError):\n             parse_check_config(\"vibes\", {\"instructions\": \"look again\"})\n \n+    @parameterized.expand(\n+        [\n+            (\"count_query_with_percentage_format\", _threshold_config(value_format=\"percentage_scaled\")),\n+            (\"affected_users_with_event_count\", _threshold_config(metric_kind=\"affected_users\", value_format=\"count\")),\n+            (\"duration_without_unit\", _threshold_config(metric_kind=\"duration\", value_format=\"duration\")),\n+            (\n+                \"negative_count_goal\",\n+                _threshold_config(value_format=\"count\", comparison={\"operator\": \"lte\", \"value\": -1}),\n+            ),\n+            (\"fractional_count_baseline\", _threshold_config(value_format=\"count\", baseline_value=1.5)),\n+            (\n+                \"fractional_count_bound\",\n+                _threshold_config(\n+                    value_form"
+    },
+    {
+      "id": "pr-89152",
+      "type": "pr",
+      "title": "#89152 · perf(nodejs): move eleven serial test suites to the parallel lane",
+      "url": "https://github.com/PostHog/posthog/pull/89152",
+      "date": "2026-08-27T09:20:10Z",
+      "excerpt": "## Problem\n\nAnyone waiting on nodejs CI pays for 11 test suites that run one at a time. Each wipes the shared Postgres and then reads back the team the wipe created, which is what earned them the `--runInBand` serial lane. That reset is legacy: the test helpers can mint a unique team per test instead.\n\n## Changes\n\n- Eleven suites moved to the 4-worker parallel lane. Each creates its own team and organization rather than wiping shared state.\n- `getTeam` and `getFirstTeam` query by id, instead of reading every row of `posthog_team` and filtering in JS. Largest single win, and it compounds: every suite using the team fixture pays it, and it grew worse as suites stopped wiping.\n- `uniqueTestId` draws from `crypto.randomInt` rather than `Math.random`, which a test can mock.\n- `insertHogFunctionTemplate` upserts, because templates are global rather than team-scoped.\n- One suite no longer deletes every Kafka topic on the shared broker. Another no longer deletes a Redis key prefix that `logs-rate-limiter.service.test` also uses.\n- The legacy plugin tests draw plugin ids from the full range. They used 100000 slots across 50 tests, so they collided on `posthog_plugin_pkey` about 1% of runs, and rows now outlive the run.\n- The logs thread relief test moves to its own serial file. It asserts the event loop never stalls past 120ms, which measures the machine: it read 149ms with workers competing for CPU, and 26ms alone.\n- A hogflow test sorts before snapshotting, instead of asserting an order its query never sets.\n- Nothing user-visible changes. Test infrastructure only.\n\n| | before | a"
+    },
+    {
+      "id": "code-89152-2d3876221a47f058e71fa6ed7ab91b38afee4099",
+      "type": "code",
+      "title": "nodejs/src/cdp/_tests/fixtures.ts",
+      "url": "https://github.com/PostHog/posthog/blob/9c1f73da7c1ea0412e23f0ee2ef147c3e606e310/nodejs%2Fsrc%2Fcdp%2F_tests%2Ffixtures.ts",
+      "date": "2026-08-27T09:20:10Z",
+      "excerpt": "@@ -4,7 +4,7 @@ import { Message } from 'node-rdkafka'\n \n import { PostgresRouter } from '~/common/utils/db/postgres'\n import { UUIDT } from '~/common/utils/utils'\n-import { getTeamMemberUserId, insertRow } from '~/tests/helpers/sql'\n+import { getTeamMemberUserId, insertRow, uniqueTestId } from '~/tests/helpers/sql'\n \n import { ClickHousePerson, ClickHouseTimestamp, ProjectId, RawClickHouseEvent, Team } from '../../types'\n import { CohortMembershipChange } from '../consumers/cdp-cohort-membership.consumer'\n@@ -58,7 +58,7 @@ export const createHogFunction = (hogFunction: Partial<HogFunctionType>) => {\n export const createIntegration = (integration: Partial<IntegrationType>) => {\n     const item: IntegrationType = {\n         team_id: 1,\n-        id: integration.id ?? 1,\n+        id: integration.id ?? uniqueTestId(),\n         kind: integration.kind ?? 'slack',\n         config: {},\n         sensitive_config: {},\n@@ -184,27 +184,33 @@ export const insertHogFunctionTemplate = async (\n         template.bytecode = await compileHog(template.code)\n     }\n \n-    const res = await insertRow(postgres, 'posthog_hogfunctiontemplate', {\n-        id: randomUUID(),\n-        template_id: template.id,\n-        sha: 'sha',\n-        name: template.name,\n-        description: template.description,\n-        code: template.code,\n-        code_language: template.code_language,\n-        status: template.status,\n-        free: template.free,\n-        category: template.category,\n-        icon_url: template.icon_url,\n-        filters: template.filters,\n-        masking: template.masking,\n-        mappings: template.mappings,\n-        bytecode: template.bytecode,\n-        inputs_schema: template.inputs_schema,\n-        type: template.type,\n-        created_at: new Date().toISOString(),\n-        upda"
+    },
+    {
+      "id": "pr-73726",
+      "type": "pr",
+      "title": "#73726 · fix(replay): stop a busy scrub sidecar crash-looping the consumer",
+      "url": "https://github.com/PostHog/posthog/pull/73726",
+      "date": "2026-07-26T09:07:50Z",
+      "excerpt": "## Problem\n\nThe `ingestion-sessionreplay-ml-image-scrub` consumer container has been in a crash loop for over a day: 32 pods, roughly 280 restarts each in 28 hours, and 11 of 32 ready. The sidecar in the same pod has zero restarts, so it is the consumer exiting on its own with code 1, about 55 seconds after each start.\n\nThe terminal error is the same on every pod I sampled:\n\n\n\nThe chain:\n\n1. The sidecar admits `IMAGE_SCRUB_CONCURRENCY` requests but can only execute `SCRUB_WORKERS` of them, so the difference sits in its accept queue.\n2. A queued request sends no bytes, and `ScrubClient` bounds requests with `req.setTimeout`, which is an **inactivity** timeout. Queueing therefore reads as an unresponsive sidecar rather than a busy one, and all four attempts queue behind the same jam.\n3. `ImageBatcher.handleBatch` rethrows the failure, on the principle that one failure dooms the batch.\n4. `consumer-v1` treats any `eachBatch` throw as fatal and exits the process: *\"We re-throw the error as that way it will be caught in server.ts and trigger a full shutdown\"*.\n\nIt is self-sustaining. A pod exiting triggers a rebalance, its partitions land on pods that are already just as saturated, and those pods die in turn, so saturation spread across the lane instead of easing.\n\nTwo more exits share the same shape, both observed in prod logs:\n\n- The whole-batch scrub deadline. It surfaces as a `ConcurrencyController` abort rather than as a scrub error, so classifying by error type alone would have left this path still fatal — it would have become the *next* thing to fire once the timeouts wer"
+    },
+    {
+      "id": "code-73726-e9d1ab1b72341278d8c726998b10f88a2399e3fd",
+      "type": "code",
+      "title": "nodejs/src/ingestion/pipelines/sessionreplay/ml-mirror-image-scrub/image-batcher.test.ts",
+      "url": "https://github.com/PostHog/posthog/blob/3956d3556295732fc08c118420ee72194af5891f/nodejs%2Fsrc%2Fingestion%2Fpipelines%2Fsessionreplay%2Fml-mirror-image-scrub%2Fimage-batcher.test.ts",
+      "date": "2026-07-26T09:07:50Z",
+      "excerpt": "@@ -3,7 +3,7 @@ import { Message, TopicPartitionOffset } from 'node-rdkafka'\n import { hashImageBytes, imageRef } from './content-ref'\n import { ImageBatcher, OffsetStore } from './image-batcher'\n import { ImageShardStore, ScrubbedImage } from './image-shard-store'\n-import { ScrubClient } from './scrub-client'\n+import { ScrubClient, ScrubUnavailable } from './scrub-client'\n \n const pt = (n: number): string => String(n).padStart(32, '0')\n const CONTENT_KEY = 'fedcba9876543210fedcba9876543210'\n@@ -482,7 +482,10 @@ describe('ImageBatcher', () => {\n         ).toThrow('scrubConcurrency')\n     })\n \n-    it('aborts the batch and replays when scrubbing exceeds the deadline', async () => {\n+    it('drops the images still in flight when scrubbing exceeds the deadline, without failing the batch', async () => {\n+        // Every capacity failure has to end this way, the deadline included. It reaches the batch as\n+        // whatever the concurrency controller rejects an aborted job with rather than as a scrub\n+        // error, so classifying by error type alone leaves this one path still killing the pod.\n         const store = new FakeStore()\n         const offsets = new FakeOffsets()\n         const hangingClient = { scrub: () => new Promise<Buffer>(() => {}) } as unknown as ScrubClient\n@@ -494,8 +497,79 @@ describe('ImageBatcher', () => {\n             0\n         )\n \n-        await expect(batcher.handleBatch([msg(0, 0, pt(1), Buffer.from('a'))], 1)).rejects.toThrow()\n-        expect(offsets.stored).toBe(0)\n+        await expect(batcher.handleBatch([msg(0, 0, pt(1), Buffer.from('a'))], 1)).resolves.toBeUndefined()\n+        expect(store.writes).toHaveLength(0)\n+    })\n+\n+    it('drops an image the sidecar has no capacity for instead of failing the batch', async () => {\n+        // T"
+    },
+    {
+      "id": "pr-90965",
+      "type": "pr",
+      "title": "#90965 · perf(hogql): reuse shared database in runners that bypassed it",
+      "url": "https://github.com/PostHog/posthog/pull/90965",
+      "date": "2026-08-31T14:35:22Z",
+      "excerpt": "## Problem\n\nBuilding the per-team HogQL database is a large share of query compile time, and eight query runners rebuild it inside the executor on every calculation. These runners power SQL insights, the events explorer, person and group lists, session timelines, and property-value dropdowns.\n\n[#88183](https://github.com/PostHog/posthog/pull/88183) added a shared per-run database on the runner base class, but only the insight runners (trends, funnels, retention, paths) use it. The existing `hogql_database_build_duration_seconds` histogram counts builds and their duration, but cannot attribute a build to the call path that requested it, so redundant builds are invisible in aggregate.\n\n## Changes\n\n- Each runner passes `context=self.build_hogql_context()` into `execute_hogql_query`, so one shared build serves every call in a run.\n- Events explorer queries with `*` columns built the database twice per run (main query plus the recordings check); they now build once.\n- Actors queries that validate a trends source query before executing also drop from two builds to one.\n- New counter `hogql_database_build_total{trigger}` attributes every build to its call path: `shared`, `executor`, `printer`, `runner_context`, `shared_kill_switch`, or `direct` (all other callers). After deploy, `executor` and `printer` rates drop and `shared` rises; watch it with `sum(rate(hogql_database_build_total[5m])) by (trigger)`.\n- Query results and SQL are unchanged; the response `timings` payload now records `build_shared_database` in place of the executor's `create_hogql_database` entry.\n- Direct-connec"
+    },
+    {
+      "id": "code-90965-cf858241fb603ac33604dcac499aff33b6b9ef40",
+      "type": "code",
+      "title": "posthog/api/test/test_person.py",
+      "url": "https://github.com/PostHog/posthog/blob/7a4793117c74d7b4806f13c93f4c697332d7ec59/posthog%2Fapi%2Ftest%2Ftest_person.py",
+      "date": "2026-08-31T14:35:22Z",
+      "excerpt": "@@ -1897,8 +1897,9 @@ def test_pagination_limit(self):\n         returned_ids = []\n         # The property-access-control feature check reuses the request's already-loaded team,\n         # so listing persons no longer pays a per-request Team lookup (was 16). +1 for the\n-        # saved-expressions fetch in the HogQL database build.\n-        with self.assertNumQueries(16):\n+        # saved-expressions fetch in the HogQL database build. +1 for the shared-database\n+        # kill-switch instance setting, cold-cache here but TTL-cached per worker in production.\n+        with self.assertNumQueries(17):\n             response = self.client.get(\"/api/person/?limit=10\").json()\n         self.assertEqual(len(response[\"results\"]), 9)\n         returned_ids += [x[\"distinct_ids\"][0] for x in response[\"results\"]]"
+    },
+    {
+      "id": "pr-96782",
+      "type": "pr",
+      "title": "#96782 · chore(ci): adopt shared uv setup action",
+      "url": "https://github.com/PostHog/posthog/pull/96782",
+      "date": "2026-09-10T15:48:07Z",
+      "excerpt": "## Problem\n\nMost workflows still repeat exact uv pins after the [shared action](https://github.com/PostHog/posthog/pull/96867) provides a common setup entry point.\n\nEach uv upgrade still requires a large mechanical workflow diff after the base layer lands.\n\n## Changes\n\n- Forty-nine of 64 GitHub and Depot setup steps now use the composite, including the base layer's Python quality job.\n- Fifteen steps retain direct pins because their checkout can select a revision without the new action.\n- Each exception names its checkout contract; existing pnpm composites do not guarantee that the new uv action exists in older trees.\n- Tool-only jobs disable dependency caching; project jobs keep explicit overrides where their lockfile or cache policy differs.\n- Conditions, environments, outputs, identifiers, and non-cache inputs remain unchanged.\n- The mechanical migration includes sparse-checkout paths and upgrades the last two v7.3.0 callers to v7.6.0. No product behavior changes.\n\n**Before**\n\n\n\n**After**\n\n\n\n## How did you test this code?\n\n- Local checks: focused unittest suite, compatibility validator, workflow lint, CI-equivalent actionlint, and strict preflight.\n- A structural comparison checks controls and non-cache inputs across all 64 setup steps.\n- A checkout audit checks the sparse paths and every direct-install exception.\n- The [Depot smoke run](https://depot.dev/orgs/ntsdt08fpt/workflows/hwl37p2jql?job=rrqmn7wg52&attempt=p127b6668r) verifies the mirrored composite at the upgrade layer's uv 0.12.5 pin, with GitHub REST blocked.\n- Full application suites were not rerun locally. F"
+    },
+    {
+      "id": "code-96782-8a698151baa6b58210139c99901c006ae0097565",
+      "type": "code",
+      "title": ".github/workflows/build-deltalite.yml",
+      "url": "https://github.com/PostHog/posthog/blob/e433135bbdabd987c9f69b4322601346a2fd0bf4/.github%2Fworkflows%2Fbuild-deltalite.yml",
+      "date": "2026-09-10T15:48:07Z",
+      "excerpt": "@@ -222,9 +222,10 @@ jobs:\n               with:\n                   python-version: 3.13.13\n \n+            # Direct install: Publishing commits to the PR head, which may predate the local action.\n             - name: Install uv\n               id: setup-uv\n-              uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7.3.0\n+              uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7.6.0\n               with:\n                   version: '0.11.28'\n                   enable-cache: true"
+    },
+    {
+      "id": "pr-72442",
+      "type": "pr",
+      "title": "#72442 · feat(empty-state): add shared ProductEmptyState gate with MCP analytics as reference adoption",
+      "url": "https://github.com/PostHog/posthog/pull/72442",
+      "date": "2026-07-21T21:15:20Z",
+      "excerpt": "## Problem\n\nProducts that need first-run setup each hand-rolled their own empty/onboarding screen (or leaned on the deprecated `ProductIntroduction`), and MCP analytics specifically redirected never-instrumented projects out to the app-wide `/onboarding` flow. There was no shared, consistent way for a product scene to show a skippable \"set me up\" state in-scene until real data arrives.\n\n## Changes\n\nIntroduces a shared **ProductEmptyState** platform and adopts it for MCP analytics as the reference implementation.\n\n- `ProductEmptyState` + `ProductEmptyStateGate`, driven by a single-layer `productSetupStatusLogic` contract (`loading | needs-setup | waiting-for-data | has-data`). A scene opts in by declaring `emptyState` on its `SceneExport`; detection stays per-product but pushes a normalized status into one place any surface can read.\n- Detection must be a real signal (data-existence query / entity count), never a dismissal flag. Skip is local-only (per browser, per team) so the real product appears the moment data lands.\n- MCP analytics: in-scene setup screen with the wizard command (`TerminalCard`), a low-fidelity interactive tool-call preview (filter chips + a self-tracing sparkline), a dedicated `--color-product-mcp-analytics-*` accent, and removal of the old redirect-to-onboarding path. **The underlying event-detection query is unchanged from what shipped before** — only the routing around it moved in-scene.\n\n\n\n## How did you test this code?\n\n- Ran `pnpm --filter=@posthog/frontend typescript:check` (clean) plus lint/format and `hogli ci:preflight`.\n- Captured the screens"
+    },
+    {
+      "id": "code-72442-e93c18db32bba4a920d87c377dd2625d69782761",
+      "type": "code",
+      "title": "frontend/src/lib/components/ProductEmptyState/productSetupStatusLogic.test.ts",
+      "url": "https://github.com/PostHog/posthog/blob/0e5e5551aa95d80d9605c2bd6965c9e509115bbf/frontend%2Fsrc%2Flib%2Fcomponents%2FProductEmptyState%2FproductSetupStatusLogic.test.ts",
+      "date": "2026-07-21T21:15:20Z",
+      "excerpt": "@@ -0,0 +1,62 @@\n+import { expectLogic } from 'kea-test-utils'\n+\n+import { teamLogic } from 'scenes/teamLogic'\n+\n+import { ProductKey } from '~/queries/schema/schema-general'\n+import { initKeaTests } from '~/test/init'\n+\n+import { productSetupStatusLogic } from './productSetupStatusLogic'\n+\n+describe('productSetupStatusLogic', () => {\n+    beforeEach(() => {\n+        localStorage.clear()\n+        initKeaTests()\n+    })\n+\n+    function mountLogic(): ReturnType<typeof productSetupStatusLogic.build> {\n+        const logic = productSetupStatusLogic({ productKey: ProductKey.MCP_ANALYTICS })\n+        logic.mount()\n+        return logic\n+    }\n+\n+    // Guards the skip path end to end: a broken skip either traps users on the\n+    // empty state or (worse) permanently hides it for users who never skipped.\n+    it('skip hides the empty state without touching detection, and unskip restores it', async () => {\n+        const logic = mountLogic()\n+        logic.actions.setDetectedStatus('needs-setup')\n+        expect(logic.values.showEmptyState).toBe(true)\n+\n+        await expectLogic(logic, () => logic.actions.skipEmptyState()).toFinishAllListeners()\n+        expect(logic.values.skipped).toBe(true)\n+        expect(logic.values.showEmptyState).toBe(false)\n+        // Detection is untouched by skipping.\n+        expect(logic.values.status).toBe('needs-setup')\n+\n+        await expectLogic(logic, () => logic.actions.unskipEmptyState()).toFinishAllListeners()\n+        expect(logic.values.showEmptyState).toBe(true)\n+    })\n+\n+    it.each([\n+        ['loading', false],\n+        ['unknown', false],\n+        ['needs-setup', true],\n+        ['waiting-for-data', true],\n+        ['has-data', false],\n+    ] as const)('status %s → showEmptyState %s', (status, expected) => {\n+        const logic "
+    }
+  ]
+}

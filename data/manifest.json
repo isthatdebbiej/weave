@@ -1,0 +1,18 @@
+{
+  "repository": "PostHog/posthog",
+  "displayName": "PostHog",
+  "start": "2026-07-06T21:44:49Z",
+  "end": "2026-10-04T21:44:49Z",
+  "generatedAt": "2026-10-04T22:20:30.258Z",
+  "expectedPRs": 16064,
+  "collectedPRs": 16064,
+  "uniquePRs": 16064,
+  "screenedPRs": 16064,
+  "humanAuthoredPRs": 14323,
+  "botAuthoredPRs": 1741,
+  "reviewedPRs": 0,
+  "complete": true,
+  "windows": 32,
+  "reviewedSourceCount": 0,
+  "notes": []
+}

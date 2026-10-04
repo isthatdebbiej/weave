@@ -1,0 +1,578 @@
+{
+  "version": "1.0.0",
+  "repository": "PostHog/posthog",
+  "start": "2026-07-06T21:44:49Z",
+  "end": "2026-10-04T21:44:49Z",
+  "intervalDays": 90,
+  "expected": 16064,
+  "unique": 16064,
+  "duplicatesRemoved": 0,
+  "complete": true,
+  "windows": [
+    {
+      "start": "2026-07-06T21:44:49.000Z",
+      "end": "2026-07-09T21:44:48.000Z",
+      "expected": 700,
+      "collected": 700,
+      "unique": 700,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-09T21:44:49.000Z",
+      "end": "2026-07-12T21:44:48.000Z",
+      "expected": 232,
+      "collected": 232,
+      "unique": 232,
+      "pages": 3,
+      "expectedPages": 3,
+      "pageNumbers": [
+        1,
+        2,
+        3
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-12T21:44:49.000Z",
+      "end": "2026-07-15T21:44:48.000Z",
+      "expected": 662,
+      "collected": 662,
+      "unique": 662,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-15T21:44:49.000Z",
+      "end": "2026-07-18T21:44:48.000Z",
+      "expected": 564,
+      "collected": 564,
+      "unique": 564,
+      "pages": 6,
+      "expectedPages": 6,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-18T21:44:49.000Z",
+      "end": "2026-07-21T21:44:48.000Z",
+      "expected": 414,
+      "collected": 414,
+      "unique": 414,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-21T21:44:49.000Z",
+      "end": "2026-07-24T21:44:48.000Z",
+      "expected": 636,
+      "collected": 636,
+      "unique": 636,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-24T21:44:49.000Z",
+      "end": "2026-07-27T21:44:48.000Z",
+      "expected": 226,
+      "collected": 226,
+      "unique": 226,
+      "pages": 3,
+      "expectedPages": 3,
+      "pageNumbers": [
+        1,
+        2,
+        3
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-27T21:44:49.000Z",
+      "end": "2026-07-30T21:44:48.000Z",
+      "expected": 653,
+      "collected": 653,
+      "unique": 653,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-07-30T21:44:49.000Z",
+      "end": "2026-08-02T21:44:48.000Z",
+      "expected": 226,
+      "collected": 226,
+      "unique": 226,
+      "pages": 3,
+      "expectedPages": 3,
+      "pageNumbers": [
+        1,
+        2,
+        3
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-02T21:44:49.000Z",
+      "end": "2026-08-05T21:44:48.000Z",
+      "expected": 652,
+      "collected": 652,
+      "unique": 652,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-05T21:44:49.000Z",
+      "end": "2026-08-08T21:44:48.000Z",
+      "expected": 473,
+      "collected": 473,
+      "unique": 473,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-08T21:44:49.000Z",
+      "end": "2026-08-11T21:44:48.000Z",
+      "expected": 473,
+      "collected": 473,
+      "unique": 473,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-11T21:44:49.000Z",
+      "end": "2026-08-14T21:44:48.000Z",
+      "expected": 616,
+      "collected": 616,
+      "unique": 616,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-14T21:44:49.000Z",
+      "end": "2026-08-17T21:44:48.000Z",
+      "expected": 177,
+      "collected": 177,
+      "unique": 177,
+      "pages": 2,
+      "expectedPages": 2,
+      "pageNumbers": [
+        1,
+        2
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-17T21:44:49.000Z",
+      "end": "2026-08-20T21:44:48.000Z",
+      "expected": 795,
+      "collected": 795,
+      "unique": 795,
+      "pages": 8,
+      "expectedPages": 8,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-20T21:44:49.000Z",
+      "end": "2026-08-23T21:44:48.000Z",
+      "expected": 246,
+      "collected": 246,
+      "unique": 246,
+      "pages": 3,
+      "expectedPages": 3,
+      "pageNumbers": [
+        1,
+        2,
+        3
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-23T21:44:49.000Z",
+      "end": "2026-08-26T21:44:48.000Z",
+      "expected": 667,
+      "collected": 667,
+      "unique": 667,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-26T21:44:49.000Z",
+      "end": "2026-08-29T21:44:48.000Z",
+      "expected": 496,
+      "collected": 496,
+      "unique": 496,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-08-29T21:44:49.000Z",
+      "end": "2026-09-01T21:44:48.000Z",
+      "expected": 459,
+      "collected": 459,
+      "unique": 459,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-01T21:44:49.000Z",
+      "end": "2026-09-04T21:44:48.000Z",
+      "expected": 691,
+      "collected": 691,
+      "unique": 691,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-04T21:44:49.000Z",
+      "end": "2026-09-07T21:44:48.000Z",
+      "expected": 250,
+      "collected": 250,
+      "unique": 250,
+      "pages": 3,
+      "expectedPages": 3,
+      "pageNumbers": [
+        1,
+        2,
+        3
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-07T21:44:49.000Z",
+      "end": "2026-09-10T21:44:48.000Z",
+      "expected": 824,
+      "collected": 824,
+      "unique": 824,
+      "pages": 9,
+      "expectedPages": 9,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-10T21:44:49.000Z",
+      "end": "2026-09-13T21:44:48.000Z",
+      "expected": 306,
+      "collected": 306,
+      "unique": 306,
+      "pages": 4,
+      "expectedPages": 4,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-13T21:44:49.000Z",
+      "end": "2026-09-16T21:44:48.000Z",
+      "expected": 823,
+      "collected": 823,
+      "unique": 823,
+      "pages": 9,
+      "expectedPages": 9,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-16T21:44:49.000Z",
+      "end": "2026-09-19T21:44:48.000Z",
+      "expected": 580,
+      "collected": 580,
+      "unique": 580,
+      "pages": 6,
+      "expectedPages": 6,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-19T21:44:49.000Z",
+      "end": "2026-09-22T21:44:48.000Z",
+      "expected": 591,
+      "collected": 591,
+      "unique": 591,
+      "pages": 6,
+      "expectedPages": 6,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-22T21:44:49.000Z",
+      "end": "2026-09-25T21:44:48.000Z",
+      "expected": 892,
+      "collected": 892,
+      "unique": 892,
+      "pages": 9,
+      "expectedPages": 9,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-25T21:44:49.000Z",
+      "end": "2026-09-28T21:44:48.000Z",
+      "expected": 361,
+      "collected": 361,
+      "unique": 361,
+      "pages": 4,
+      "expectedPages": 4,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-28T21:44:49.000Z",
+      "end": "2026-09-30T09:44:48.000Z",
+      "expected": 309,
+      "collected": 309,
+      "unique": 309,
+      "pages": 4,
+      "expectedPages": 4,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-09-30T09:44:49.000Z",
+      "end": "2026-10-01T21:44:48.000Z",
+      "expected": 601,
+      "collected": 601,
+      "unique": 601,
+      "pages": 7,
+      "expectedPages": 7,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-10-01T21:44:49.000Z",
+      "end": "2026-10-04T21:44:48.000Z",
+      "expected": 469,
+      "collected": 469,
+      "unique": 469,
+      "pages": 5,
+      "expectedPages": 5,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "incomplete": false
+    },
+    {
+      "start": "2026-10-04T21:44:49Z",
+      "end": "2026-10-04T21:44:49Z",
+      "expected": 0,
+      "collected": 0,
+      "unique": 0,
+      "pages": 1,
+      "expectedPages": 1,
+      "pageNumbers": [
+        1
+      ],
+      "incomplete": false
+    }
+  ],
+  "corpus": {
+    "url": "/corpus.json.gz",
+    "bytes": 20227444,
+    "sha256": "b30221f6fb33e52be9315f17be76874f11f958d6396396e76c638bfa94ae4ac5"
+  }
+}

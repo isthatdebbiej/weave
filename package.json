@@ -1,0 +1,33 @@
+{
+  "name": "posthog-engineering-impact",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "node scripts/validate-data.mjs && next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "collect": "node --env-file-if-exists=.env.local scripts/collect.mjs",
+    "screen": "node scripts/screen.mjs",
+    "analyze": "node scripts/build-analysis.mjs",
+    "enrich": "node --env-file-if-exists=.env.local scripts/enrich.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "export:session": "node scripts/export-session.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "yaml": "^2.8.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.8.0"
+  }
+}

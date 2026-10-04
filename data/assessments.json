@@ -1,0 +1,648 @@
+{
+  "repository": "PostHog/posthog",
+  "outcomes": [
+    {
+      "id": "rest-framework",
+      "initiative": "warehouse-foundations",
+      "initiativeName": "Warehouse foundations",
+      "title": "A shared foundation for 130 connectors",
+      "dimension": "leverage",
+      "significance": 5,
+      "stage": "Merged · adopted in code",
+      "prs": [
+        71477,
+        72023
+      ],
+      "summary": "Replaced repeated authentication, pagination, retry, and resume logic with a shared REST framework, and changed authoring guidance to prevent the duplication returning.",
+      "benefit": "Framework fixes can now reach the migrated connectors through one implementation. The migration preserves connector-specific behavior and adds shared host-pinning and secret-redaction protections.",
+      "significanceRationale": "Broad, demonstrated adoption across approximately 130 connectors, with framework regression tests and a reported full source-suite run. The follow-up migration establishes adoption beyond a proposed abstraction.",
+      "metrics": [
+        {
+          "value": "~130",
+          "label": "connectors migrated",
+          "context": "The merged migration enumerates approximately 130 source connectors adopting common/rest_source; this is adoption breadth, not a PR count.",
+          "pr": 72023
+        }
+      ],
+      "followUp": "Extend the same test-gated migration to remaining bespoke connectors, prioritizing duplicated retry and authentication paths.",
+      "limitations": [
+        "Adoption is demonstrated in repository code; production maintenance savings were not measured."
+      ],
+      "codeMatch": "common/rest_source"
+    },
+    {
+      "id": "warehouse-test-cost",
+      "initiative": "warehouse-development",
+      "initiativeName": "Warehouse development",
+      "title": "A 20-minute test loop reduced to 1.6",
+      "dimension": "devex",
+      "significance": 3,
+      "stage": "Reported local benchmark",
+      "prs": [
+        69665
+      ],
+      "summary": "Removed real retry sleeps and repeated parser, subprocess, and fixture costs from the warehouse backend test suite while preserving the reported test outcomes.",
+      "benefit": "Engineers working on warehouse sources get substantially faster feedback from the service-free test suite without removing assertions.",
+      "significanceRationale": "A substantial, repeatable development workflow improvement supported by before/after timing and implementation changes. Limited to the measured local, service-free workload.",
+      "metrics": [
+        {
+          "value": "20.5 → 1.6 min",
+          "label": "local suite time",
+          "context": "Author-reported single-process service-free suite; unchanged pass/skip/error outcomes. Environment-dependent errors remained.",
+          "pr": 69665
+        },
+        {
+          "value": "~12×",
+          "label": "faster feedback",
+          "context": "Approximate speedup reported for the same service-free test workload, not all CI.",
+          "pr": 69665
+        }
+      ],
+      "followUp": "Measure the same changes on CI hardware before estimating team-wide waiting time saved.",
+      "limitations": [
+        "Local measurements; 66 environment-dependent errors remained unchanged. No claim of a 12× reduction in total CI time."
+      ],
+      "codeMatch": "conftest.py"
+    },
+    {
+      "id": "warehouse-memory-recovery",
+      "initiative": "warehouse-resilience",
+      "initiativeName": "Warehouse resilience",
+      "title": "Recovering failed warehouse imports safely",
+      "dimension": "reliability",
+      "significance": 3,
+      "stage": "Merged · regression tested",
+      "prs": [
+        68639,
+        72934,
+        76349
+      ],
+      "summary": "Added recovery for corrupt Delta logs, bounded memory-related repartitioning, and a path to coarsen tables that had been split too aggressively.",
+      "benefit": "Warehouse imports can recover without repeatedly worsening fragmentation. Review-driven changes also avoid redundant maintenance and protect the salvage path with a regression test.",
+      "significanceRationale": "Substantial subsystem reliability work with targeted recovery tests and reported end-to-end partition-coarsening validation. Related fixes are grouped so repair work does not earn separate volume credit.",
+      "metrics": [
+        {
+          "value": "Preserved",
+          "label": "row identities in E2E",
+          "context": "The coarsening test compares full row-ID lists across the rewrite rather than counts alone.",
+          "pr": 76349
+        }
+      ],
+      "extraPeople": [
+        {
+          "id": "danielcarletti",
+          "role": "Contributor",
+          "rationale": "Implemented the coarsening repair and materially reviewed the original recovery work, including the missing salvage test and duplicate-vacuum path.",
+          "pr": 76349,
+          "comment": 3531208797,
+          "commentPR": 68639
+        }
+      ],
+      "followUp": "Track genuine OOMs separately from deploy-related heartbeat loss, then verify recovery and coarsening outcomes after rollout.",
+      "limitations": [
+        "No measured fleet-wide incident reduction. Disk spilling is disabled by default and needs infrastructure configuration; coarsening is feature gated."
+      ],
+      "codeMatch": "test_extract.py"
+    },
+    {
+      "id": "parent-table-reuse",
+      "initiative": "warehouse-fanout",
+      "initiativeName": "Warehouse fan-out",
+      "title": "Reuse parent data instead of re-fetching it",
+      "dimension": "performance",
+      "significance": 3,
+      "stage": "Local end-to-end comparison",
+      "prs": [
+        72929,
+        83322
+      ],
+      "summary": "Reused a completed warehouse snapshot for fan-out endpoints instead of repeatedly fetching the parent list from the vendor API.",
+      "benefit": "Reduces redundant vendor requests while preserving a consistent parent snapshot. A Sentry issue-tag-values comparison returned the same 77 rows with a shorter run.",
+      "significanceRationale": "Measured improvement for a concrete end-to-end workload, backed by matching results and regression tests. The result is not extrapolated to the entire source fleet.",
+      "metrics": [
+        {
+          "value": "105.9 → 37.0 s",
+          "label": "Sentry test sync",
+          "context": "Author-reported devbox comparison for issue_tag_values; 77 rows through either parent source, with the gate forced on locally.",
+          "pr": 72929
+        }
+      ],
+      "extraPeople": [
+        {
+          "id": "estefaniarabadan",
+          "role": "Reviewer",
+          "rationale": "Prompted completed-snapshot pinning and removal of silently enabling billable parent syncs; the author confirmed both design changes.",
+          "pr": 72929,
+          "comment": 3681706749
+        }
+      ],
+      "followUp": "Use the added drift counters to expand rollout only where warehouse parent snapshots stay sufficiently fresh.",
+      "limitations": [
+        "Feature gated. One real Sentry source was tested; timings for the two smaller child tables were explicitly described as noise."
+      ],
+      "codeMatch": "test_warehouse_parent.py"
+    },
+    {
+      "id": "source-api-versioning",
+      "initiative": "warehouse-foundations",
+      "initiativeName": "Warehouse foundations",
+      "title": "Version pins that keep source upgrades deliberate",
+      "dimension": "leverage",
+      "significance": 3,
+      "stage": "Merged · registry adoption",
+      "prs": [
+        70018
+      ],
+      "summary": "Added explicit API-version declarations and per-source-instance pins, seeding existing versions and introducing a generic deprecation surface.",
+      "benefit": "Source maintainers can introduce a vendor API version without silently changing existing customer configurations. Stripe demonstrates runtime dispatch through the shared contract.",
+      "significanceRationale": "A shared maintenance capability adopted across source declarations, with actual runtime dispatch in Stripe. Breadth of declarations does not imply all vendors have multi-version runtime support.",
+      "metrics": [
+        {
+          "value": "217",
+          "label": "released sources seeded",
+          "context": "The PR documents existing version declarations seeded for 217 released sources; the versioning machinery leaves existing behavior unchanged.",
+          "pr": 70018
+        }
+      ],
+      "followUp": "Prioritize the next vendor sunset and validate an explicit customer migration using the version-pin runbook.",
+      "limitations": [
+        "Most sources retain their current hardcoded version until a later dispatch implementation."
+      ],
+      "codeMatch": "test_source_versions.py"
+    },
+    {
+      "id": "migration-squash",
+      "initiative": "developer-bootstrap",
+      "initiativeName": "Developer bootstrap",
+      "title": "A shorter path to a fresh database",
+      "dimension": "devex",
+      "significance": 3,
+      "stage": "Validated locally · repaired",
+      "prs": [
+        91646,
+        96400,
+        96430,
+        96466,
+        99932
+      ],
+      "summary": "Squashed historical Django migrations to reduce fresh-database setup, then repaired schema-restore, duplicate-index, and partial-upgrade regressions.",
+      "benefit": "Fresh CI and development databases apply a shorter migration chain. The complete story includes the rollout repair work and the upgrade paths the first version missed.",
+      "significanceRationale": "Substantial shared workflow improvement, conservatively rated 3 because the initial rollout caused documented CI and upgrade regressions. Follow-up repairs are grouped into the original outcome.",
+      "metrics": [
+        {
+          "value": "~20 → 5.5 min",
+          "label": "fresh default database",
+          "context": "The original PR reports approximately 20 minutes before and a final local fresh default-database run of about 5.5 minutes.",
+          "pr": 91646
+        }
+      ],
+      "followUp": "Make partially migrated databases and restored schema dumps mandatory cases for the next migration squash.",
+      "limitations": [
+        "The first rollout broke E2E restores and partial upgrades and created a duplicate index. Linked follow-ups repair those paths; net team-hours saved is unknown."
+      ],
+      "codeMatch": "test_restore"
+    },
+    {
+      "id": "light-worktrees",
+      "initiative": "developer-bootstrap",
+      "initiativeName": "Developer bootstrap",
+      "title": "Light worktrees with no second toolchain install",
+      "dimension": "devex",
+      "significance": 3,
+      "stage": "Validated local workflow",
+      "prs": [
+        70648
+      ],
+      "summary": "Let matching-lockfile worktrees borrow the main clone's Python and Node toolchain, preserving local-install precedence and refusing mismatched dependencies.",
+      "benefit": "Small edit-and-commit tasks avoid duplicated environments, and Python pre-commit checks work in a bare linked worktree.",
+      "significanceRationale": "A substantial development setup improvement with a documented end-to-end bare-shell test and explicit lockfile/mutation guards.",
+      "metrics": [
+        {
+          "value": "~6 GB → 470 MB",
+          "label": "edit-and-commit worktree",
+          "context": "Author-reported footprint for a light worktree versus the full setup; app-running worktrees still need the heavy setup.",
+          "pr": 70648
+        }
+      ],
+      "followUp": "Make the lightweight path easy to discover and check whether engineers still create full environments for small changes.",
+      "limitations": [
+        "Measured for edit-and-commit worktrees; no team-wide adoption or time-saved measurement."
+      ],
+      "codeMatch": "worktree-borrow.sh"
+    },
+    {
+      "id": "automatic-previews",
+      "initiative": "frontend-feedback",
+      "initiativeName": "Frontend feedback",
+      "title": "App previews available without a manual label",
+      "dimension": "devex",
+      "significance": 1,
+      "stage": "Merged · rollout unverified",
+      "prs": [
+        68859
+      ],
+      "summary": "Enabled automatic hibernating app previews for eligible frontend PRs, with opt-out, draft handling, and teardown paths.",
+      "benefit": "Creates a direct route for reviewers to inspect the application behavior of a frontend change.",
+      "significanceRationale": "A bounded implemented workflow capability. The source says real label-driven dogfooding remained to be done, so estimated adoption and compute savings are not treated as outcomes.",
+      "metrics": [],
+      "followUp": "Check whether reviewers use the previews and whether preview readiness becomes part of the review workflow.",
+      "limitations": [
+        "No verified post-merge adoption. Estimated VM hours in the PR are forecasts, not measured savings."
+      ],
+      "codeMatch": "preview"
+    },
+    {
+      "id": "hogvm-execution",
+      "initiative": "hogvm-runtime",
+      "initiativeName": "HogVM runtime",
+      "title": "Faster transformations on production ingestion",
+      "dimension": "performance",
+      "significance": 5,
+      "stage": "Author-reported production A/B",
+      "prs": [
+        74117,
+        95610
+      ],
+      "summary": "Reduced interpreter allocation and dispatch costs in the Rust HogVM. Production old/new pods were compared on the same EU ingestion traffic.",
+      "benefit": "The shared transformation runtime executes each event with lower latency. The evidence also captures a separate cohort call-site regression and its follow-up repair.",
+      "significanceRationale": "Broad shared-runtime benefit supported by a production before/after table with unchanged reported error rate and parity tests. Affected cohort consumers required an additional fix, disclosed here.",
+      "metrics": [
+        {
+          "value": "0.76 → 0.48 ms",
+          "label": "reported p90 execution",
+          "context": "Author-reported same-window EU main analytics ingestion comparison, all transformations mixed. Source dashboards are private; the public PR records the figures.",
+          "pr": 74117
+        },
+        {
+          "value": "−34%",
+          "label": "reported p50 latency",
+          "context": "0.34 ms to 0.23 ms in the same reported production comparison.",
+          "pr": 74117
+        }
+      ],
+      "extraPeople": [
+        {
+          "id": "pl",
+          "role": "Reviewer",
+          "rationale": "Identified missing token-decode and chunk-switch coverage; the author added the requested regression tests before merge.",
+          "pr": 74117,
+          "comment": 3924053972
+        }
+      ],
+      "followUp": "Audit other HogVM consumers for decode-on-every-evaluation behavior before widening runtime changes.",
+      "limitations": [
+        "Production figures are author-reported, not independently reproduced. A cohort consumer paid repeated decode costs; PR #95610 addresses that separately."
+      ],
+      "codeMatch": "chunk_switch_unwind.hog"
+    },
+    {
+      "id": "cohort-decode",
+      "initiative": "hogvm-runtime",
+      "initiativeName": "HogVM runtime",
+      "title": "Decode cohort conditions once, not per event",
+      "dimension": "performance",
+      "significance": 3,
+      "stage": "Reported microbenchmark",
+      "prs": [
+        95610
+      ],
+      "summary": "Moved condition bytecode decoding into catalog construction so repeated cohort evaluations reuse a decoded program.",
+      "benefit": "Avoids repeatedly allocating thousands of string literals for large membership conditions, addressing a concrete integration cost of the new HogVM representation.",
+      "significanceRationale": "Substantial hot-path improvement shown for an explicitly scoped microbenchmark, with parity and malformed-program handling changes. No throughput extrapolation.",
+      "metrics": [
+        {
+          "value": "744.1 → 420.2 μs",
+          "label": "8,000-string IN evaluation",
+          "context": "One reported scratch microbenchmark run on a dev machine; smaller four-condition timing was near run-to-run noise.",
+          "pr": 95610
+        }
+      ],
+      "followUp": "Measure the catalog-build cost and production evaluation distribution before estimating throughput gains.",
+      "limitations": [
+        "Single-machine microbenchmark. Malformed programs now drop at catalog construction; rollout monitoring is required."
+      ],
+      "codeMatch": "test"
+    },
+    {
+      "id": "account-query",
+      "initiative": "customer-analytics",
+      "initiativeName": "Customer analytics",
+      "title": "Faster account lists with scoped database reads",
+      "dimension": "performance",
+      "significance": 3,
+      "stage": "Reported benchmark · gated",
+      "prs": [
+        78648
+      ],
+      "summary": "Pushed tenant filtering into federated Postgres reads and combined compatible aggregating joins for Customer Analytics account queries.",
+      "benefit": "Account lists with custom properties avoid scanning unrelated rows. The benchmark verifies identical result hashes while making the latency and memory trade-off explicit.",
+      "significanceRationale": "A substantial measured workflow improvement with repeated HTTP benchmarks and correctness checks, conservatively scoped to the tested account configurations.",
+      "metrics": [
+        {
+          "value": "842 → 241 ms",
+          "label": "10k accounts + 5 properties",
+          "context": "Median of 10 real HTTP requests per scenario, with byte-identical result hashes; not a fleet-wide latency measurement.",
+          "pr": 78648
+        }
+      ],
+      "followUp": "Validate the rollout on large accounts while monitoring memory before widening the feature flag.",
+      "limitations": [
+        "At 100k accounts the relative improvement shrinks. The largest tested scenario increased peak memory from 132 MB to about 315 MB."
+      ],
+      "codeMatch": "test_federated_join_merge.py"
+    },
+    {
+      "id": "announcements-foundation",
+      "initiative": "account-announcements",
+      "initiativeName": "Account announcements",
+      "title": "A supported bridge from accounts to Slack channels",
+      "dimension": "leverage",
+      "significance": 3,
+      "stage": "Merged · downstream adoption",
+      "prs": [
+        72688,
+        70358,
+        70366,
+        70370,
+        70377
+      ],
+      "primaryAuthor": "arthurdedeus",
+      "summary": "Extracted a conversations facade that Customer Analytics could use without importing another product's internals. The announcement API and send workflow then adopted that contract.",
+      "benefit": "The delivered stack gives account managers a compose, preview, and delivery flow while keeping product boundaries explicit.",
+      "significanceRationale": "An explicit cross-engineer dependency chain, from facade to API to asynchronous delivery to UI. The whole stack is one outcome rather than five PRs of credit.",
+      "metrics": [
+        {
+          "value": "Facade → API → UI",
+          "label": "documented dependency chain",
+          "context": "The stacked PR descriptions explicitly identify the dependency sequence, and the API imports the conversations facade.",
+          "pr": 70366
+        }
+      ],
+      "extraPeople": [
+        {
+          "id": "ceyniustranberg",
+          "role": "Adopter",
+          "rationale": "Built the model, API, send task, and UI that consume the conversations facade; the stack explicitly links its dependencies.",
+          "pr": 70377
+        }
+      ],
+      "followUp": "Reuse the facade contract for other cross-product channel integrations, while validating actual announcement adoption.",
+      "limitations": [
+        "The announcement feature is flag gated; customer usage and rollout coverage are not established by the public PRs."
+      ],
+      "codeMatch": "facade/api.py"
+    },
+    {
+      "id": "account-track-rules",
+      "initiative": "customer-analytics",
+      "initiativeName": "Customer analytics",
+      "title": "Previewable rules for which accounts stay visible",
+      "dimension": "product",
+      "significance": 1,
+      "stage": "Implemented · flag at 0%",
+      "prs": [
+        87301
+      ],
+      "summary": "Added versioned account rules, a shared preview/execution compiler, controlled application, and recorded run history.",
+      "benefit": "Provides admins a tested way to replace stale one-off account updates with repeatable, inspectable rules.",
+      "significanceRationale": "A concrete implemented capability with backend, frontend, and devbox validation. Rated bounded because the source explicitly starts rollout at 0%.",
+      "metrics": [],
+      "followUp": "Use a small rollout to validate that preview results match admin expectations before enabling rules broadly.",
+      "limitations": [
+        "The feature flag starts at 0%; customer benefit has not been established."
+      ],
+      "codeMatch": "test",
+      "issues": [
+        86654
+      ]
+    },
+    {
+      "id": "reusable-widgets",
+      "initiative": "notebook-widgets",
+      "initiativeName": "Reusable notebook widgets",
+      "title": "Reusable widgets with controlled shared updates",
+      "dimension": "product",
+      "significance": 3,
+      "stage": "Merged · validated capability",
+      "prs": [
+        94104
+      ],
+      "summary": "Added a searchable widget catalog, reviewed version publishing, pinned placements, and draft isolation for widgets reused across notebooks.",
+      "benefit": "Notebook authors can reuse a capability and propagate a reviewed improvement without copying notebook-local code or unexpectedly replacing pinned versions.",
+      "significanceRationale": "Substantial product workflow spanning discovery, publication, versioning, and consumption, supported by functional tests and recorded browser checks. Usage is not measured.",
+      "metrics": [],
+      "extraPeople": [
+        {
+          "id": "sinan-ku",
+          "role": "Reviewer",
+          "rationale": "Identified source-data access, client bytecode, and draft/live-build isolation risks; the final implementation and tests address these paths.",
+          "pr": 94104,
+          "comment": 4007586553
+        }
+      ],
+      "followUp": "Validate the catalog with a small set of reusable internal widgets and review access checks at every reuse boundary.",
+      "limitations": [
+        "No public measurement of active users or saved authoring time. The review history is part of the outcome, not an approval-count signal."
+      ],
+      "codeMatch": "test_reusable_widgets.py"
+    },
+    {
+      "id": "chart-test-simplification",
+      "initiative": "insight-maintainability",
+      "initiativeName": "Insight maintainability",
+      "title": "One appropriate test layer for each chart behavior",
+      "dimension": "simplification",
+      "significance": 3,
+      "stage": "Reported local test comparison",
+      "prs": [
+        68776
+      ],
+      "summary": "Separated chart-only rendering from full-page testing and removed duplicate full-mount checks only after identifying surviving regression coverage.",
+      "benefit": "Product Analytics retains its chart behavior checks with less expensive, clearer test ownership.",
+      "significanceRationale": "A subsystem-level simplification with named surviving coverage and before/after runtime, not credit for deleted lines or tests.",
+      "metrics": [
+        {
+          "value": "18.4 → ~11 s",
+          "label": "local insight suite",
+          "context": "Reported local wall time after test-harness and coverage consolidation; unrelated to overall CI duration.",
+          "pr": 68776
+        }
+      ],
+      "followUp": "Apply the same coverage-mapping approach to other slow suites before deleting tests or adding more workers.",
+      "limitations": [
+        "Local test timing; the regression-coverage mapping is the justification for simplification."
+      ],
+      "codeMatch": "render-insight.tsx"
+    },
+    {
+      "id": "legacy-insight-converter",
+      "initiative": "insight-maintainability",
+      "initiativeName": "Insight maintainability",
+      "title": "Retiring the unused insight conversion path",
+      "dimension": "simplification",
+      "significance": 3,
+      "stage": "Merged · callers checked",
+      "prs": [
+        100749
+      ],
+      "summary": "Removed the legacy filters-to-query converter after checking that no production caller remained, while preserving the live series helpers and their tests.",
+      "benefit": "Insight maintainers have one fewer obsolete transformation path to reason about, and module names match the functions callers actually use.",
+      "significanceRationale": "A subsystem cleanup justified by caller analysis, preserved live exports, and test coverage across consumers. File or line deletion counts do not affect significance.",
+      "metrics": [],
+      "followUp": "Continue the legacy-insight removal only after verifying each remaining consumer and its surviving regression tests.",
+      "limitations": [
+        "Internal maintenance benefit; no measured user-performance or team-time gain."
+      ],
+      "codeMatch": "actionsAndEventsToSeries.test.ts"
+    },
+    {
+      "id": "signals-measurement",
+      "initiative": "signals-followup",
+      "initiativeName": "Signals follow-up measurements",
+      "title": "One executable plan for checking whether a fix helped",
+      "dimension": "product",
+      "significance": 3,
+      "stage": "Merged · staged rollout",
+      "prs": [
+        110300,
+        110308,
+        109433
+      ],
+      "summary": "Unified expected-impact goals and executable follow-up checks, with full post-resolution query windows, atomic replacement, and independent approval.",
+      "benefit": "A report's displayed measurement plan and its scheduled checks use the same records, reducing false claims based on pre-fix data or failed persistence.",
+      "significanceRationale": "A substantial end-to-end product workflow with timing, permissions, concurrency, and rollback tests. Three dependent layers are grouped as one outcome.",
+      "metrics": [],
+      "followUp": "Audit a sample of resolved reports to verify that verdicts use a full post-fix window and that inconclusive results remain understandable.",
+      "limitations": [
+        "Rollout is staged and metric suggestions remain gated. No observed customer adoption or fix-success rate is claimed."
+      ],
+      "codeMatch": "test_report_checks.py"
+    },
+    {
+      "id": "parallel-node-tests",
+      "initiative": "node-test-feedback",
+      "initiativeName": "Node test feedback",
+      "title": "Parallel tests without wiping shared state",
+      "dimension": "devex",
+      "significance": 3,
+      "stage": "Reported local benchmark",
+      "prs": [
+        89152
+      ],
+      "summary": "Moved eligible serial suites to isolated team fixtures and the parallel lane, preserving genuinely timing-sensitive cases in serial execution.",
+      "benefit": "Node developers wait less for the serial lane while avoiding cross-test interference in shared Postgres, Kafka, and Redis services.",
+      "significanceRationale": "A substantial test-workflow improvement with full-lane comparisons and explicit rejected migrations. The unmerged ingestion follow-up is not credited.",
+      "metrics": [
+        {
+          "value": "553 → 348 s",
+          "label": "local serial lane",
+          "context": "Reported same-machine lane comparison; parallel lane changed from 79 to 81 seconds. CI hardware was not checked.",
+          "pr": 89152
+        }
+      ],
+      "followUp": "Validate on CI hardware, then address the remaining worker-isolation constraints before moving more suites.",
+      "limitations": [
+        "Local timings. Follow-up PR #89866 was not merged at the snapshot and is excluded from scoring."
+      ],
+      "codeMatch": "test"
+    },
+    {
+      "id": "replay-crash-loop",
+      "initiative": "replay-resilience",
+      "initiativeName": "Replay ingestion resilience",
+      "title": "A busy scrubber no longer takes its consumer down",
+      "dimension": "reliability",
+      "significance": 3,
+      "stage": "Merged · failure-path tests",
+      "prs": [
+        73726
+      ],
+      "summary": "Separated unavailable-sidecar failures from fatal consumer failures and handled batch deadlines and revoked-partition offset errors without terminating the consumer.",
+      "benefit": "Breaks a failure mechanism where a busy image scrubber causes consumer exits and rebalances that spread saturation to other pods.",
+      "significanceRationale": "A concrete production failure mechanism documented with logs and addressed with targeted error-path tests. Rated 3 because a post-deploy recovery measurement is not available.",
+      "metrics": [],
+      "followUp": "Check consumer restart rates alongside dropped-image counts to verify availability improved without hiding lost scrubbing work.",
+      "limitations": [
+        "The source records the pre-fix crash loop; it does not establish a measured post-rollout incident reduction."
+      ],
+      "codeMatch": "test"
+    },
+    {
+      "id": "shared-query-database",
+      "initiative": "query-foundations",
+      "initiativeName": "Shared query foundations",
+      "title": "One shared database build across query runners",
+      "dimension": "leverage",
+      "significance": 3,
+      "stage": "Merged · adoption tested",
+      "prs": [
+        90965
+      ],
+      "summary": "Connected eight query runners to the existing shared per-run HogQL database, including SQL insights, events, people, groups, and session views.",
+      "benefit": "The shared foundation reaches consumers that previously bypassed it. Events and actor queries avoid constructing the same database twice in a run.",
+      "significanceRationale": "Demonstrated adoption of a shared capability across multiple query surfaces, with tests asserting one database construction and preserved SQL semantics.",
+      "metrics": [
+        {
+          "value": "2 → 1",
+          "label": "builds in affected queries",
+          "context": "Events and validating actors queries are documented examples; seven parameterized runner tests check the shared path.",
+          "pr": 90965
+        }
+      ],
+      "followUp": "Use the new build-trigger counter to find remaining callers that still construct the database redundantly.",
+      "limitations": [
+        "No measured fleet-wide latency reduction. Direct-connection queries intentionally keep their connection-scoped build."
+      ],
+      "codeMatch": "test"
+    },
+    {
+      "id": "shared-uv-setup",
+      "initiative": "ci-maintainability",
+      "initiativeName": "CI maintainability",
+      "title": "One uv setup contract across CI workflows",
+      "dimension": "simplification",
+      "significance": 3,
+      "stage": "Merged · structural validation",
+      "prs": [
+        96782
+      ],
+      "summary": "Adopted a shared uv setup action across compatible GitHub and Depot steps, retaining explicit exceptions for workflows checking out older revisions.",
+      "benefit": "Routine uv upgrades no longer require duplicating the same version and cache wiring across most CI steps.",
+      "significanceRationale": "Shared maintenance simplification backed by adoption and a structural comparison preserving workflow controls. No runtime speedup is claimed.",
+      "metrics": [
+        {
+          "value": "49 / 64",
+          "label": "setup steps consolidated",
+          "context": "PR-reported setup-step adoption; 15 retain direct pins because their checkout may lack the composite action.",
+          "pr": 96782
+        }
+      ],
+      "followUp": "Keep exceptions tied to checkout contracts so future migrations do not break workflows running older revisions.",
+      "limitations": [
+        "A maintainability result, not a measurement of CI minutes saved."
+      ],
+      "codeMatch": ".github"
+    },
+    {
+      "id": "shared-product-empty-state",
+      "initiative": "product-onboarding",
+      "initiativeName": "Product onboarding",
+      "title": "A reusable first-run experience inside each product",
+      "dimension": "product",
+      "significance": 1,
+      "stage": "Merged · reference adoption",
+      "prs": [
+        72442
+      ],
+      "summary": "Introduced a shared product empty-state contract and adopted it in MCP Analytics, using real data-existence signals instead of dismissal flags.",
+      "benefit": "A first-time user can see product-specific setup in context, and the product becomes available when real data arrives.",
+      "significanceRationale": "An implemented user workflow with one reference adoption. Broader adoption is not assumed from the presence of a reusable component.",
+      "metrics": [],
+      "followUp": "Evaluate the MCP Analytics setup flow before migrating other products to the shared gate.",
+      "limitations": [
+        "One reference adoption; no measured activation-rate improvement."
+      ],
+      "codeMatch": "productSetupStatusLogic"
+    }
+  ]
+}

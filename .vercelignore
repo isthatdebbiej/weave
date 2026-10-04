@@ -1,0 +1,11 @@
+.git
+.env*
+!.env.example
+data/raw
+data/reviews
+data/candidates.json
+artifacts
+submission/session*
+node_modules
+.next
+*.tsbuildinfo
